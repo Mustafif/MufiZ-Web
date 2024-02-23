@@ -34,15 +34,18 @@ impl Package {
     pub fn new(target: &str, version: &str) -> Self {
         let mut deb: Option<String> = None;
         let mut rpm: Option<String> = None;
+        let version_orig = version;
+        let mut version = version.to_string();
+        version.remove(0);
         if target.contains("linux") {
-            deb = Some(format!("https://github.com/Mustafif/MufiZ/releases/download/{version}/mufiz_{version}_{target}.deb"));
-            rpm = Some(format!("https://github.com/Mustafif/MufiZ/releases/download/{version}/mufiz_{version}_{target}.rpm"));
+            deb = Some(format!("https://github.com/Mustafif/MufiZ/releases/download/{version_orig}/mufiz_{version}_{target}.deb"));
+            rpm = Some(format!("https://github.com/Mustafif/MufiZ/releases/download/{version_orig}/mufiz_{version}_{target}.rpm"));
         }
 
         Self{
             target: target.to_string(),
-            version: version.to_string(),
-            zip: format!("https://github.com/Mustafif/MufiZ/releases/download/{version}/mufiz_{version}_{target}.zip"),
+            version: version_orig.to_string(),
+            zip: format!("https://github.com/Mustafif/MufiZ/releases/download/{version_orig}/mufiz_{version}_{target}.zip"),
             deb,
             rpm
         }
