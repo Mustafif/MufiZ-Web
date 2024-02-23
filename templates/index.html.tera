@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Project Page</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
+            rel="stylesheet">
+        <style>
+        body {
+            font-family: Forum, cursive;
+            background-color: #f2f2f2; /* Light Gray */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Dark Gray */
+        }
+
+        h1, h2, h3{
+            font-family: 'Forum', cursive;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* White */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .box {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .box h2 {
+            margin-bottom: 10px;
+            color: #f0ad4e; /* Yellow */
+        }
+
+        .languages {
+            background-color: #343a40; /* Dark Gray */
+            color: #f0ad4e; /* Yellow */
+        }
+
+        .targets {
+            background-color: #5a6268; /* Medium Gray */
+            color: #fff; /* White */
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc; /* Light Gray */
+            width: 100%;
+            margin-top: 10px;
+            color: #333; /* Dark Gray */
+            background-color: #fff; /* White */
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #f0ad4e; /* Yellow */
+        }
+
+        option {
+            background-color: #fff; /* White */
+        }
+
+
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"] + label {
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #f0f0f0; /* Light Gray */
+            color: #333; /* Dark Gray */
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        input[type="radio"]:checked + label {
+            background-color: #f0ad4e; /* Yellow */
+            color: #000; /* White */
+        }
+
+        input[type="radio"] + label:hover {
+            background-color: #e0e0e0; /* Lighter Gray */
+        }
+
+        .tag-container {
+            display: none;
+            margin-top: 10px; /* Add some top margin for spacing */
+        }
+        
+        .tag {
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #f0ad4e; /* Yellow (matching the theme) */
+            color: #333; /* Dark Gray */
+            margin-right: 5px;
+            margin-bottom: 5px; /* Add some bottom margin for spacing */
+            display: inline-block; /* Display tags inline */
+        }
+        
+        /* Style for tag containers to display tags vertically */
+        .tag-container.vertical .tag {
+            display: block;
+            margin-bottom: 5px; /* Add bottom margin to separate tags */
+        }
+        
+
+        .icon {
+            margin-right: 10px;
+        }
+
+        a {
+            color: #007bff; /* Blue */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        .releases {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .release {
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .release h3 {
+            margin-top: 0;
+        }
+        .latest-release {
+            background-color: #d4edda; /* Light green */
+        }
+        
+        .package-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .package-table th, .package-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .package-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .package-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .package-table tr:hover {
+            background-color: #f2f2f2;
+        }
+        .w3-card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        .w3-card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        .accordion-button {
+            background-color: #f2f2f2;
+            border: none;
+            color: #333;
+            cursor: pointer;
+            padding: 10px 20px;
+            text-align: left;
+            width: 100%;
+            border-radius: 10px;
+            position: relative;
+        }
+        .accordion-button::after {
+            content: "\25BA"; /* Unicode character for right arrow */
+            position: absolute;
+            right: 20px;
+        }
+        .accordion-content {
+            display: none;
+            padding: 20px;
+        }
+        .accordion-content.show {
+            display: block;
+        }
+        .accordion-button.active::after {
+            content: "\25BC"; /* Unicode character for down arrow */
+        }
+    </style>
+    </head>
+    <body>
+
+        <div class="w3-container container">
+            <div class="w3-card box languages">
+                <h2>Languages</h2>
+                <div class="w3-row-padding">
+                    <div class="w3-half">
+                        <div class="w3-container w3-padding">
+                            <i class="icon fab fa-c"></i> C
+                        </div>
+                    </div>
+                    <div class="w3-half">
+                        <div class="w3-container w3-padding">
+                            <i class="icon fab fa-zigbee"></i> Zig
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-card box targets">
+                <h2>Supported Targets</h2>
+                <input type="radio" id="windows" name="target" checked>
+                <label for="windows">Windows</label>
+                <input type="radio" id="linux" name="target">
+                <label for="linux">Linux</label>
+                <input type="radio" id="macos" name="target">
+                <label for="macos">MacOS</label>
+                <input type="radio" id="webassembly" name="target">
+                <label for="webassembly">WebAssembly</label>
+
+                <div class="tag-container" id="windowsTags">
+                    {% for w in windows_targets %}
+                    <span class="tag">{{w}}</span>
+                    {% endfor %}
+                </div>
+                <div class="tag-container" id="linuxTags" class="vertical">
+                    {% for l in linux_targets %}
+                    <span class="tag">{{l}}</span>
+                    {% endfor %}
+                </div>
+                <div class="tag-container" id="macosTags" class="vertical">
+                    {% for m in macos_targets %}
+                    <span class="tag">{{m}}</span>
+                    {% endfor %}
+                </div>
+                <div class="tag-container" id="webassemblyTags"
+                    class="vertical">
+                    <span class="tag">was32-wasi</span>
+                </div>
+            </div>
+
+            <div class="w3-card">
+                <button onclick="toggleAccordion('packageAccordion')" class="accordion-button" id="accordionButton">Packages</button>
+                <div id="packageAccordion" class="accordion-content">
+                    <table class="package-table">
+                        <thead>
+                                <tr>
+                                    <th>Target</th>
+                                    <th>Zip</th>
+                                    <th>Deb</th>
+                                    <th>RPM</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for p in packages %}
+                                <tr>
+                                    <td>{{ p.target }}</td>
+                                    <td>{% if p.zip %}<a href="{{ p.zip }}">Download</a>{% else %}N/A{% endif %}</td>
+                                    <td>{% if p.deb %}<a href="{{ p.deb }}">Download</a>{% else %}N/A{% endif %}</td>
+                                    <td>{% if p.rpm %}<a href="{{ p.rpm }}">Download</a>{% else %}N/A{% endif %}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            <div class="w3-card box releases">
+                <h2>Releases</h2>
+                {% for r in releases %}
+                {% if r.status == "Latest" %}
+                    <div class="latest-release release">
+                 {%else %}
+                  <div class="release">
+                {% endif %}
+               
+                    <h3>{{r.version}} {{r.codename}} Release</h3>
+                    <p><strong>Status:</strong> {{r.status}}</p>
+                    <p><a href="{{r.link}}"><i class="fab fa-github"></i> View
+                            Release</a></p>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="w3-card box repo">
+                <h2>Repository</h2>
+                <p>Check out the project's repository on GitHub: <a
+                        href="https://github.com/Mustafif/MufiZ"
+                        target="_blank">GitHub Repo</a></p>
+            </div>
+        </div>
+
+        <script>
+            var radioButtons = document.querySelectorAll('input[name="target"]');
+            radioButtons.forEach(function(button) {
+                button.addEventListener('change', function() {
+                    var target = this.id;
+                    var tagContainers = document.querySelectorAll('.tag-container');
+                    tagContainers.forEach(function(container) {
+                        container.style.display = 'none';
+                    });
+                    var selectedContainer = document.getElementById(target + 'Tags');
+                    if (selectedContainer) {
+                        selectedContainer.style.display = 'block';
+                    }
+                });
+            });
+            function toggleAccordion(id) {
+                var x = document.getElementById(id);
+                var button = document.getElementById("accordionButton");
+                if (x.classList.contains("show")) {
+                    x.classList.remove("show");
+                    button.classList.remove("active");
+                } else { 
+                    x.classList.add("show");
+                    button.classList.add("active");
+                }
+            }
+    </script>
+
+    </body>
+</html>
