@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% set title = "Language Reference" %}
+    {% set subtitle = "Explore through the depths of Mufiness" %}
+    {% include "head" %}
+    <body>
+        {% include "nav" %}
+
+        <div class="w3-container container w3-mobile">
+            <pre><code class="language-zig">// Hello World in Zig
+const std = @import("std");
+pub fn main() void {
+    const stdout = std.io.getStdOut().writer();
+    try stdout.print("Hello, {}!\n", .{"World"});
+}
+</code></pre>
+        </div>
+        {% include "footer" %}
+        <script src="/assets/prism.js"></script>
+    </body>
+</html>

@@ -1,37 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MufiZ</title>
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
-            rel="stylesheet">
-
-        <link rel="stylesheet" type='text/css'
-            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-        <link rel="stylesheet" type="text/css" href="/assets/style.css" />
-    </head>
+    {% set title = "" %}
+    {% set subtitle = "Mufi-Lang with Ziggyness" %}
+    {% include "head" %}
     <body>
-        <div class="title w3-mobile">
-            <h1>MufiZ</h1>
-        </div>
-        <div class="subtitle w3-mobile">
-            <p>Mufi-Lang with Ziggyness</p>
-            <p><a href="https://github.com/Mustafif/MufiZ" class="w3-mobile">
-                    <i
-                        class="devicon-github-original-wordmark language-icon w3-text-grey"></i>
-                </a></p>
-        </div>
-
-        <nav class="w3-mobile">
-            <a class="w3-mobile" href="/lang_ref">Language Reference</a>
-            <a class="w3-mobile" href="/std">Standard Library</a>
-            <a class="w3-mobile" href="#news">News</a>
-        </nav>
+        {% include "nav" %}
 
         <div class="w3-container container w3-mobile">
             <div class="w3-card box w3-mobile">
@@ -102,7 +75,7 @@
 
             <div class="w3-card w3-mobile">
                 <button onclick="toggleAccordion('packageAccordion')"
-                    class="accordion-button"
+                    class="accordion-button w3-large"
                     id="accordionButton">Packages</button>
                 <div id="packageAccordion" class="accordion-content">
                     <table class="package-table">
@@ -180,11 +153,6 @@
                     }
                 }
         </script>
-            <footer class="w3-text-white w3-mobile">
-                <p>Mustafif Khan | Licensed under <a
-                        href="https://www.gnu.org/licenses/gpl-2.0.html">GPLv2</a>
-                    | Personal : <a
-                        href="https://mustafif.com">mustafif.com</a></p>
-            </footer>
+        {% include "footer" %}
         </body>
     </html>

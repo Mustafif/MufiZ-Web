@@ -1,0 +1,25 @@
+<div class="title w3-mobile">
+    <h1>MufiZ {{title}} </h1>
+</div>
+<div class="subtitle w3-mobile">
+    <p>{{subtitle}}</p>
+    <p><a href="https://github.com/Mustafif/MufiZ" class="w3-mobile">
+            <i
+                class="devicon-github-original-wordmark language-icon w3-text-grey"></i>
+        </a></p>
+</div>
+
+<nav class="w3-mobile">
+    <a class="w3-mobile" href="/">
+        <i class="fa fa-home"></i> Home
+    </a>
+    <a class="w3-mobile" href="/lang_ref">
+        <i class="fa fa-book"></i> Language Reference
+    </a>
+    <a class="w3-mobile" href="/std">
+        <i class="fa fa-cubes"></i> Standard Library
+    </a>
+    <a class="w3-mobile" href="#news">
+        <i class="fa fa-newspaper"></i> News
+    </a>
+</nav>
