@@ -62,6 +62,17 @@
             width: 45%;
             max-width: 400px;
         }
+
+        @media (max-width: 768px) {
+            .languages {
+                flex-direction: column;
+                align-items: center;
+            }
+            .language {
+                width: 100%;
+                max-width: none;
+            }
+        }
         .language-icon {
             font-size: 48px; /* Adjust size as needed */
             margin-bottom: 20px; /* Add spacing between icon and list */
@@ -272,64 +283,60 @@
             background-color: #f2f2f2;
             text-align: center;
             padding: 10px 0;
+            background-color: #343a40;
         }
     </style>
     </head>
     <body>
-        <div class="title">
+        <div class="title w3-mobile">
             <h1>MufiZ</h1>
         </div>
-        <div class="subtitle">
+        <div class="subtitle w3-mobile">
             <p>Mufi-Lang with Ziggyness</p>
-            <p><a href="https://github.com/Mustafif/MufiZ">
-                <i class="devicon-github-original-wordmark language-icon w3-text-grey"></i>
-              </a></p>
+            <p><a href="https://github.com/Mustafif/MufiZ" class="w3-mobile">
+                    <i
+                        class="devicon-github-original-wordmark language-icon w3-text-grey"></i>
+                </a></p>
         </div>
-        <div class="w3-container container">
+        <div class="w3-container container w3-mobile">
 
-            <div class="w3-card box">
+            <div class="w3-card box w3-mobile">
                 <h2 class="w3-text-white">Core Languages</h2>
                 <div class="languages" id="languages">
-                    <div class="language">
-                        <i
-                            class="devicon-zig-original colored language-icon"></i>
+                    <div class="language w3-mobile">
+                        <i class="devicon-zig-original colored language-icon"></i>
                         <h2>Zig</h2>
                         <ul class="language-list">
                             <li>Modern, expressive syntax</li>
                             <li>Focus on safety and performance</li>
-                            <li>Efficient memory management with comptime
-                                features</li>
+                            <li>Efficient memory management with comptime features</li>
                             <li>Easy cross-compilation</li>
                             <li>Build caching for faster compilation times</li>
                         </ul>
                     </div>
-                    <div class="language">
+                    <div class="language w3-mobile">
                         <i class="devicon-c-plain language-icon"></i>
                         <h2>C</h2>
                         <ul class="language-list">
-                            <li>Suitable for compiler design due to its
-                                simplicity and low-level features.</li>
-                            <li>Compilers built in C are highly portable across
-                                different platforms.</li>
-                            <li>Efficient memory management and runtime
-                                performance are crucial for compiler tasks.</li>
-                            <li>Standard libraries in C provide essential
-                                functionalities for compiler
-                                implementation.</li>
+                            <li>Suitable for compiler design due to its simplicity and low-level features.</li>
+                            <li>Compilers built in C are highly portable across different platforms.</li>
+                            <li>Efficient memory management and runtime performance are crucial for compiler tasks.</li>
+                            <li>Standard libraries in C provide essential functionalities for compiler implementation.</li>
                         </ul>
                     </div>
-                </div> </div>
+                </div>
+            </div>
 
-            <div class="w3-card box targets">
+            <div class="w3-card box targets w3-mobile">
                 <h2>Supported Targets</h2>
                 <input type="radio" id="windows" name="target" checked>
-                <label for="windows">Windows</label>
+                <label class="w3-margin" for="windows">Windows</label>
                 <input type="radio" id="linux" name="target">
-                <label for="linux">Linux</label>
+                <label class="w3-margin" for="linux">Linux</label>
                 <input type="radio" id="macos" name="target">
-                <label for="macos">MacOS</label>
+                <label class="w3-margin" for="macos">MacOS</label>
                 <input type="radio" id="webassembly" name="target">
-                <label for="webassembly">WebAssembly</label>
+                <label class="w3-margin" for="webassembly">WebAssembly</label>
 
                 <div class="tag-container" id="windowsTags">
                     {% for w in windows_targets %}
@@ -352,7 +359,7 @@
                 </div>
             </div>
 
-            <div class="w3-card">
+            <div class="w3-card w3-mobile">
                 <button onclick="toggleAccordion('packageAccordion')"
                     class="accordion-button"
                     id="accordionButton">Packages</button>
@@ -386,7 +393,7 @@
                 </div>
             </div>
 
-            <div class="w3-card box releases">
+            <div class="w3-card box releases w3-mobile">
                 <h2>Releases</h2>
                 {% for r in releases %}
                 {% if r.status == "Latest" %}
@@ -406,34 +413,37 @@
             </div>
 
             <script>
-            var radioButtons = document.querySelectorAll('input[name="target"]');
-            radioButtons.forEach(function(button) {
-                button.addEventListener('change', function() {
-                    var target = this.id;
-                    var tagContainers = document.querySelectorAll('.tag-container');
-                    tagContainers.forEach(function(container) {
-                        container.style.display = 'none';
+                var radioButtons = document.querySelectorAll('input[name="target"]');
+                radioButtons.forEach(function(button) {
+                    button.addEventListener('change', function() {
+                        var target = this.id;
+                        var tagContainers = document.querySelectorAll('.tag-container');
+                        tagContainers.forEach(function(container) {
+                            container.style.display = 'none';
+                        });
+                        var selectedContainer = document.getElementById(target + 'Tags');
+                        if (selectedContainer) {
+                            selectedContainer.style.display = 'block';
+                        }
                     });
-                    var selectedContainer = document.getElementById(target + 'Tags');
-                    if (selectedContainer) {
-                        selectedContainer.style.display = 'block';
-                    }
                 });
-            });
-            function toggleAccordion(id) {
-                var x = document.getElementById(id);
-                var button = document.getElementById("accordionButton");
-                if (x.classList.contains("show")) {
-                    x.classList.remove("show");
-                    button.classList.remove("active");
-                } else { 
-                    x.classList.add("show");
-                    button.classList.add("active");
+                function toggleAccordion(id) {
+                    var x = document.getElementById(id);
+                    var button = document.getElementById("accordionButton");
+                    if (x.classList.contains("show")) {
+                        x.classList.remove("show");
+                        button.classList.remove("active");
+                    } else { 
+                        x.classList.add("show");
+                        button.classList.add("active");
+                    }
                 }
-            }
-    </script>
-    <footer class="box w3-text-white">
-        <p>Mustafif Khan | Project licensed under <a href="https://www.gnu.org/licenses/gpl-2.0.html">GPLv2</a> | Personal website: <a href="https://mustafif.com">mustafif.com</a></p>
-    </footer>
+        </script>
+            <footer class="w3-text-white w3-mobile">
+                <p>Mustafif Khan | Licensed under <a
+                        href="https://www.gnu.org/licenses/gpl-2.0.html">GPLv2</a>
+                    | Personal : <a
+                        href="https://mustafif.com">mustafif.com</a></p>
+            </footer>
         </body>
     </html>
