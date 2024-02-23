@@ -13,280 +13,7 @@
         <link rel="stylesheet" type='text/css'
             href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
-        <style>
-        body {
-            font-family: Forum, cursive;
-            background-color: #f2f2f2; /* Light Gray */
-            margin: 0;
-            padding: 0;
-            color: #333; /* Dark Gray */
-        }
-
-        h1, h2, h3{
-            font-family: 'Forum', cursive;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff; /* White */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .box {
-            border-radius: 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            background-color: #343a40; /* Light gray background */
-            text-align: center;
-        }
-
-        .box h2{
-            color: white;
-        }
-
-        .languages {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 20px;
-        }
-        .language {
-            flex: 0 0 auto;
-            background-color: #f2f2f2; /* White background */
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 45%;
-            max-width: 400px;
-        }
-
-        @media (max-width: 768px) {
-            .languages {
-                flex-direction: column;
-                align-items: center;
-            }
-            .language {
-                width: 100%;
-                max-width: none;
-            }
-        }
-        .language-icon {
-            font-size: 48px; /* Adjust size as needed */
-            margin-bottom: 20px; /* Add spacing between icon and list */
-        }
-        .language h2 {
-            margin-bottom: 10px;
-            font-size: 24px;
-            color: #333333; /* Dark gray text color */
-        }
-        .language-list {
-            list-style-type: none;
-            padding: 0;
-            text-align: left;
-        }
-        .language-list li {
-            margin-bottom: 10px;
-            color: #666666; /* Medium gray text color */
-        }
-        .complement-text {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #555555; /* Dark gray text color */
-        }
-        .targets {
-            background-color: #343a40; 
-            color: #fff; /* White */
-            padding-bottom: 20px;
-            font-weight: bold;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-
-        select {
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc; /* Light Gray */
-            width: 100%;
-            margin-top: 10px;
-            color: #333; /* Dark Gray */
-            background-color: #fff; /* White */
-        }
-
-        select:focus {
-            outline: none;
-            border-color: #f0ad4e; /* Yellow */
-        }
-
-        option {
-            background-color: #fff; /* White */
-        }
-
-
-
-        input[type="radio"] {
-            display: none;
-        }
-
-        input[type="radio"] + label {
-            display: inline-block;
-            cursor: pointer;
-            padding: 10px 20px;
-            background-color: #f0f0f0; /* Light Gray */
-            color: #333; /* Dark Gray */
-            border-radius: 5px;
-            margin-right: 10px;
-        }
-
-        input[type="radio"]:checked + label {
-            background-color: #f0ad4e; /* Yellow */
-            color: #000; /* White */
-        }
-
-        input[type="radio"] + label:hover {
-            background-color: #e0e0e0; /* Lighter Gray */
-        }
-
-        .tag-container {
-            display: none;
-            margin-top: 10px; /* Add some top margin for spacing */
-        }
-        
-        .tag {
-            padding: 5px 10px;
-            border-radius: 5px;
-            background-color: #f0ad4e; /* Yellow (matching the theme) */
-            color: #333; /* Dark Gray */
-            margin-right: 5px;
-            margin-bottom: 5px; /* Add some bottom margin for spacing */
-            display: inline-block; /* Display tags inline */
-        }
-        
-        /* Style for tag containers to display tags vertically */
-        .tag-container.vertical .tag {
-            display: block;
-            margin-bottom: 5px; /* Add bottom margin to separate tags */
-        }
-        
-
-        .icon {
-            margin-right: 10px;
-        }
-
-        a {
-            color: #007bff; /* Blue */
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-        .releases {
-            border-radius: 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            padding: 20px;
-        }
-        .release {
-            background-color: #f2f2f2;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            padding: 20px;
-        }
-        .release h3 {
-            margin-top: 0;
-        }
-        .latest-release {
-            background-color: #f0ad4e; 
-            font-weight: bold;
-        }
-        
-        .package-table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        .package-table th, .package-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        .package-table th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-        .package-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .package-table tr:hover {
-            background-color: #f2f2f2;
-        }
-        .w3-card {
-            border-radius: 10px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            transition: 0.3s;
-        }
-        .w3-card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        }
-        .accordion-button {
-            background-color: #f2f2f2;
-            border: none;
-            color: #333;
-            cursor: pointer;
-            padding: 10px 20px;
-            text-align: left;
-            width: 100%;
-            border-radius: 10px;
-            position: relative;
-        }
-        .accordion-button::after {
-            content: "\25BA"; /* Unicode character for right arrow */
-            position: absolute;
-            right: 20px;
-        }
-        .accordion-content {
-            display: none;
-            padding: 20px;
-        }
-        .accordion-content.show {
-            display: block;
-        }
-        .accordion-button.active::after {
-            content: "\25BC"; /* Unicode character for down arrow */
-        }
-        .title {
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .subtitle {
-            text-align: center;
-            font-size: 18px;
-            margin-bottom: 50px;
-            color: #666;
-        }
-        footer {
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: #f2f2f2;
-            text-align: center;
-            padding: 10px 0;
-            background-color: #343a40;
-        }
-    </style>
+        <link rel="stylesheet" type="text/css" href="/assets/style.css" />
     </head>
     <body>
         <div class="title w3-mobile">
@@ -299,18 +26,26 @@
                         class="devicon-github-original-wordmark language-icon w3-text-grey"></i>
                 </a></p>
         </div>
-        <div class="w3-container container w3-mobile">
 
+        <nav class="w3-mobile">
+            <a class="w3-mobile" href="/lang_ref">Language Reference</a>
+            <a class="w3-mobile" href="/std">Standard Library</a>
+            <a class="w3-mobile" href="#news">News</a>
+        </nav>
+
+        <div class="w3-container container w3-mobile">
             <div class="w3-card box w3-mobile">
                 <h2 class="w3-text-white">Core Languages</h2>
                 <div class="languages" id="languages">
                     <div class="language w3-mobile">
-                        <i class="devicon-zig-original colored language-icon"></i>
+                        <i
+                            class="devicon-zig-original colored language-icon"></i>
                         <h2>Zig</h2>
                         <ul class="language-list">
                             <li>Modern, expressive syntax</li>
                             <li>Focus on safety and performance</li>
-                            <li>Efficient memory management with comptime features</li>
+                            <li>Efficient memory management with comptime
+                                features</li>
                             <li>Easy cross-compilation</li>
                             <li>Build caching for faster compilation times</li>
                         </ul>
@@ -319,10 +54,15 @@
                         <i class="devicon-c-plain language-icon"></i>
                         <h2>C</h2>
                         <ul class="language-list">
-                            <li>Suitable for compiler design due to its simplicity and low-level features.</li>
-                            <li>Compilers built in C are highly portable across different platforms.</li>
-                            <li>Efficient memory management and runtime performance are crucial for compiler tasks.</li>
-                            <li>Standard libraries in C provide essential functionalities for compiler implementation.</li>
+                            <li>Suitable for compiler design due to its
+                                simplicity and low-level features.</li>
+                            <li>Compilers built in C are highly portable across
+                                different platforms.</li>
+                            <li>Efficient memory management and runtime
+                                performance are crucial for compiler tasks.</li>
+                            <li>Standard libraries in C provide essential
+                                functionalities for compiler
+                                implementation.</li>
                         </ul>
                     </div>
                 </div>
@@ -330,7 +70,7 @@
 
             <div class="w3-card box targets w3-mobile">
                 <h2>Supported Targets</h2>
-                <input type="radio" id="windows" name="target" checked>
+                <input type="radio" id="windows" name="target">
                 <label class="w3-margin" for="windows">Windows</label>
                 <input type="radio" id="linux" name="target">
                 <label class="w3-margin" for="linux">Linux</label>

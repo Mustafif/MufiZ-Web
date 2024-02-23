@@ -1,6 +1,7 @@
 pub mod targets;
 pub mod version;
 
+use rocket::fs::FileServer;
 use rocket::{get, launch, routes, Build, Rocket};
 use rocket_dyn_templates::{context, Template};
 use targets::packages;
@@ -26,9 +27,20 @@ async fn index() -> Template {
     )
 }
 
+#[get("/lang_ref")]
+async fn lang_ref() -> Template {
+    Template::render("lang_ref", context! {})
+}
+
+#[get("/std")]
+async fn std_() -> Template {
+    Template::render("std", context! {})
+}
+
 #[launch]
 async fn rocket() -> Rocket<Build> {
     rocket::build()
         .attach(Template::fairing())
-        .mount("/", routes![index])
+        .mount("/", routes![index, lang_ref, std_])
+        .mount("/assets", FileServer::from("assets"))
 }
