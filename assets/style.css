@@ -1,231 +1,274 @@
-body {
-    font-family: Forum, cursive;
-    background-color: #f2f2f2; /* Light Gray */
-    margin: 0;
-    padding: 0;
-    color: #333; /* Dark Gray */
+body,
+h1,
+h2,
+h3 {
+    font-family: Forum, cursive
 }
 
-h1, h2, h3{
-    font-family: 'Forum', cursive;
+.box,
+.container,
+.language {
+    border-radius: 10px;
+    padding: 20px
+}
+
+body,
+ul {
+    margin: 0
+}
+
+.container,
+option,
+select {
+    background-color: #fff
+}
+
+.container,
+nav {
+    max-width: 800px
+}
+
+.accordion-content.show,
+nav a {
+    display: block
+}
+
+a,
+nav a,
+nav a:hover {
+    text-decoration: none
+}
+
+body {
+    background-color: #f2f2f2;
+    padding: 0;
+    color: #333
 }
 
 .container {
-    max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
-    background-color: #fff; /* White */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1)
 }
 
 .box {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background-color: #343a40; /* Light gray background */
-    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1);
+    background-color: #343a40;
+    text-align: center
 }
 
-.box h2{
-    color: white;
+.box h2 {
+    color: #fff
 }
 
 .languages {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 20px;
-}
-.language {
-    flex: 0 0 auto;
-    background-color: #f2f2f2; /* White background */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    max-width: 400px;
+    margin-top: 20px
 }
 
-@media (max-width: 768px) {
+.language {
+    flex: 0 0 auto;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    width: 45%;
+    max-width: 400px
+}
+
+.targets,
+footer,
+nav {
+    background-color: #343a40
+}
+
+.language-list,
+ul {
+    list-style-type: none;
+    padding: 0
+}
+
+.releases,
+.w3-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .1)
+}
+
+@media (max-width:768px) {
     .languages {
         flex-direction: column;
-        align-items: center;
+        align-items: center
     }
+
     .language {
         width: 100%;
-        max-width: none;
+        max-width: none
     }
 }
+
 .language-icon {
-    font-size: 48px; /* Adjust size as needed */
-    margin-bottom: 20px; /* Add spacing between icon and list */
+    font-size: 48px;
+    margin-bottom: 20px
 }
+
 .language h2 {
     margin-bottom: 10px;
     font-size: 24px;
-    color: #333333; /* Dark gray text color */
+    color: #333
 }
+
 .language-list {
-    list-style-type: none;
-    padding: 0;
-    text-align: left;
+    text-align: left
 }
+
 .language-list li {
     margin-bottom: 10px;
-    color: #666666; /* Medium gray text color */
+    color: #666
 }
+
 .complement-text {
     margin-top: 20px;
     font-size: 18px;
-    color: #555555; /* Dark gray text color */
+    color: #555
 }
+
 .targets {
-    background-color: #343a40; 
-    color: #fff; /* White */
+    color: #fff;
     padding-bottom: 20px;
-    font-weight: bold;
+    font-weight: 700
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
+.tag,
 li {
-    margin-bottom: 5px;
+    margin-bottom: 5px
 }
 
 select {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc; /* Light Gray */
+    border: 1px solid #ccc;
     width: 100%;
     margin-top: 10px;
-    color: #333; /* Dark Gray */
-    background-color: #fff; /* White */
+    color: #333
+}
+
+.tag,
+input[type=radio]+label {
+    border-radius: 5px;
+    color: #333
 }
 
 select:focus {
-    outline: none;
-    border-color: #f0ad4e; /* Yellow */
+    outline: 0;
+    border-color: #f0ad4e
 }
 
-option {
-    background-color: #fff; /* White */
+input[type=radio] {
+    display: none
 }
 
-
-
-input[type="radio"] {
-    display: none;
-}
-
-input[type="radio"] + label {
+input[type=radio]+label {
     display: inline-block;
     cursor: pointer;
     padding: 10px 20px;
-    background-color: #f0f0f0; /* Light Gray */
-    color: #333; /* Dark Gray */
-    border-radius: 5px;
-    margin-right: 10px;
+    background-color: #f0f0f0;
+    margin-right: 10px
 }
 
-input[type="radio"]:checked + label {
-    background-color: #f0ad4e; /* Yellow */
-    color: #000; /* White */
+input[type=radio]:checked+label {
+    background-color: #f0ad4e;
+    color: #000
 }
 
-input[type="radio"] + label:hover {
-    background-color: #e0e0e0; /* Lighter Gray */
+input[type=radio]+label:hover {
+    background-color: #e0e0e0
 }
 
 .tag-container {
     display: none;
-    margin-top: 10px; /* Add some top margin for spacing */
+    margin-top: 10px
 }
 
 .tag {
     padding: 5px 10px;
-    border-radius: 5px;
-    background-color: #f0ad4e; /* Yellow (matching the theme) */
-    color: #333; /* Dark Gray */
+    background-color: #f0ad4e;
     margin-right: 5px;
-    margin-bottom: 5px; /* Add some bottom margin for spacing */
-    display: inline-block; /* Display tags inline */
+    display: inline-block
 }
 
-/* Style for tag containers to display tags vertically */
+.release,
+.releases {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px
+}
+
 .tag-container.vertical .tag {
     display: block;
-    margin-bottom: 5px; /* Add bottom margin to separate tags */
+    margin-bottom: 5px
 }
 
-
 .icon {
-    margin-right: 10px;
+    margin-right: 10px
 }
 
 a {
-    color: #007bff; /* Blue */
-    text-decoration: none;
+    color: #007bff
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
-.releases {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 20px;
-}
+
 .release {
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 20px;
+    background-color: #f2f2f2
 }
+
 .release h3 {
-    margin-top: 0;
+    margin-top: 0
 }
-.latest-release {
-    background-color: #f0ad4e; 
-    font-weight: bold;
+
+.latest-release,
+.package-table th {
+    background-color: #f0ad4e;
+    font-weight: 700
 }
 
 .package-table {
     border-collapse: collapse;
     width: 60%;
-    margin: auto;
+    margin: auto
 }
-.package-table th, .package-table td {
+
+.title,
+.w3-card {
+    margin-bottom: 20px
+}
+
+.package-table td,
+.package-table th {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
+    text-align: left
 }
-.package-table th {
-    background-color: #f0ad4e;
-    font-weight: bold;
+
+.package-table tr:nth-child(2n) {
+    background-color: #f9f9f9
 }
-.package-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
+
+.accordion-button,
 .package-table tr:hover {
-    background-color: #f2f2f2;
+    background-color: #f2f2f2
 }
+
 .w3-card {
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    transition: 0.3s;
+    transition: .3s
 }
+
 .w3-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2)
 }
+
 .accordion-button {
-    background-color: #f2f2f2;
     border: none;
     color: #333;
     cursor: pointer;
@@ -233,65 +276,66 @@ a:hover {
     text-align: left;
     width: 100%;
     border-radius: 10px;
-    position: relative;
+    position: relative
 }
+
+.subtitle,
+.title,
+footer,
+nav a {
+    text-align: center
+}
+
 .accordion-button::after {
-    content: "\25BA"; /* Unicode character for right arrow */
+    content: "\25BA";
     position: absolute;
-    right: 20px;
+    right: 20px
 }
+
 .accordion-content {
     display: none;
-    padding: 20px;
+    padding: 20px
 }
-.accordion-content.show {
-    display: block;
-}
+
 .accordion-button.active::after {
-    content: "\25BC"; /* Unicode character for down arrow */
+    content: "\25BC"
 }
+
 .title {
-    text-align: center;
     margin-top: 50px;
-    margin-bottom: 20px;
-    color: #333;
+    color: #333
 }
+
 .subtitle {
-    text-align: center;
     font-size: 18px;
     margin-bottom: 50px;
-    color: #666;
+    color: #666
 }
+
 footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #f2f2f2;
-    text-align: center;
-    padding: 10px 0;
-    background-color: #343a40;
+    padding: 10px 0
 }
 
-footer a{
-    color: #f0ad4e;
+footer a {
+    color: #f0ad4e
 }
+
 nav {
-    background-color: #343a40;
     overflow: hidden;
-    max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto
 }
+
 nav a {
     float: left;
-    display: block;
     color: #f2f2f2;
-    text-align: center;
     padding: 14px 20px;
-    text-decoration: none;
-    width: calc(100% / 4); /* Divide equally by 3 */
+    width: calc(100% / 4)
 }
+
 nav a:hover {
     background-color: #f0ad4e;
-    color: #333;
-    text-decoration: none;
+    color: #333
 }
