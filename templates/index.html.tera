@@ -207,7 +207,8 @@
             margin-top: 0;
         }
         .latest-release {
-            background-color: lightgray; /* Light green */
+            background-color: #f0ad4e; 
+            font-weight: bold;
         }
         
         .package-table {
