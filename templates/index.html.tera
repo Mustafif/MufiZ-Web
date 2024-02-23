@@ -3,12 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Project Page</title>
+        <title>MufiZ</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap"
             rel="stylesheet">
+
+        <link rel="stylesheet" type='text/css'
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
         <style>
         body {
             font-family: Forum, cursive;
@@ -32,24 +36,57 @@
         }
 
         .box {
-            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: #343a40; /* Light gray background */
+            text-align: center;
         }
 
-        .box h2 {
-            margin-bottom: 10px;
-            color: #f0ad4e; /* Yellow */
+        .box h2{
+            color: white;
         }
 
         .languages {
-            background-color: #343a40; /* Dark Gray */
-            color: #f0ad4e; /* Yellow */
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
         }
-
+        .language {
+            flex: 0 0 auto;
+            background-color: #f2f2f2; /* White background */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            max-width: 400px;
+        }
+        .language-icon {
+            font-size: 48px; /* Adjust size as needed */
+            margin-bottom: 20px; /* Add spacing between icon and list */
+        }
+        .language h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #333333; /* Dark gray text color */
+        }
+        .language-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        .language-list li {
+            margin-bottom: 10px;
+            color: #666666; /* Medium gray text color */
+        }
+        .complement-text {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555555; /* Dark gray text color */
+        }
         .targets {
-            background-color: #5a6268; /* Medium Gray */
+            background-color: #343a40; 
             color: #fff; /* White */
             padding-bottom: 20px;
             font-weight: bold;
@@ -159,7 +196,7 @@
             margin-top: 0;
         }
         .latest-release {
-            background-color: #d4edda; /* Light green */
+            background-color: lightgray; /* Light green */
         }
         
         .package-table {
@@ -216,26 +253,72 @@
         .accordion-button.active::after {
             content: "\25BC"; /* Unicode character for down arrow */
         }
+        .title {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 50px;
+            color: #666;
+        }
+        footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 10px 0;
+        }
     </style>
     </head>
     <body>
-
+        <div class="title">
+            <h1>MufiZ</h1>
+        </div>
+        <div class="subtitle">
+            <p>Mufi-Lang with Ziggyness</p>
+            <p><a href="https://github.com/Mustafif/MufiZ">
+                <i class="devicon-github-original-wordmark language-icon w3-text-grey"></i>
+              </a></p>
+        </div>
         <div class="w3-container container">
-            <div class="w3-card box languages">
-                <h2>Languages</h2>
-                <div class="w3-row-padding">
-                    <div class="w3-half">
-                        <div class="w3-container w3-padding">
-                            <i class="icon fab fa-c"></i> C
-                        </div>
+
+            <div class="w3-card box">
+                <h2 class="w3-text-white">Core Languages</h2>
+                <div class="languages" id="languages">
+                    <div class="language">
+                        <i
+                            class="devicon-zig-original colored language-icon"></i>
+                        <h2>Zig</h2>
+                        <ul class="language-list">
+                            <li>Modern, expressive syntax</li>
+                            <li>Focus on safety and performance</li>
+                            <li>Efficient memory management with comptime
+                                features</li>
+                            <li>Easy cross-compilation</li>
+                            <li>Build caching for faster compilation times</li>
+                        </ul>
                     </div>
-                    <div class="w3-half">
-                        <div class="w3-container w3-padding">
-                            <i class="icon fab fa-zigbee"></i> Zig
-                        </div>
+                    <div class="language">
+                        <i class="devicon-c-plain language-icon"></i>
+                        <h2>C</h2>
+                        <ul class="language-list">
+                            <li>Suitable for compiler design due to its
+                                simplicity and low-level features.</li>
+                            <li>Compilers built in C are highly portable across
+                                different platforms.</li>
+                            <li>Efficient memory management and runtime
+                                performance are crucial for compiler tasks.</li>
+                            <li>Standard libraries in C provide essential
+                                functionalities for compiler
+                                implementation.</li>
+                        </ul>
                     </div>
-                </div>
-            </div>
+                </div> </div>
 
             <div class="w3-card box targets">
                 <h2>Supported Targets</h2>
@@ -270,57 +353,59 @@
             </div>
 
             <div class="w3-card">
-                <button onclick="toggleAccordion('packageAccordion')" class="accordion-button" id="accordionButton">Packages</button>
+                <button onclick="toggleAccordion('packageAccordion')"
+                    class="accordion-button"
+                    id="accordionButton">Packages</button>
                 <div id="packageAccordion" class="accordion-content">
                     <table class="package-table">
                         <thead>
-                                <tr>
-                                    <th>Target</th>
-                                    <th>Zip</th>
-                                    <th>Deb</th>
-                                    <th>RPM</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for p in packages %}
-                                <tr>
-                                    <td>{{ p.target }}</td>
-                                    <td>{% if p.zip %}<a href="{{ p.zip }}">Download</a>{% else %}N/A{% endif %}</td>
-                                    <td>{% if p.deb %}<a href="{{ p.deb }}">Download</a>{% else %}N/A{% endif %}</td>
-                                    <td>{% if p.rpm %}<a href="{{ p.rpm }}">Download</a>{% else %}N/A{% endif %}</td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
+                            <tr>
+                                <th>Target</th>
+                                <th>Zip</th>
+                                <th>Deb</th>
+                                <th>RPM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for p in packages %}
+                            <tr>
+                                <td>{{ p.target }}</td>
+                                <td>{% if p.zip %}<a
+                                        href="{{ p.zip }}">Download</a>{% else
+                                    %}N/A{% endif %}</td>
+                                <td>{% if p.deb %}<a
+                                        href="{{ p.deb }}">Download</a>{% else
+                                    %}N/A{% endif %}</td>
+                                <td>{% if p.rpm %}<a
+                                        href="{{ p.rpm }}">Download</a>{% else
+                                    %}N/A{% endif %}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
+            </div>
 
             <div class="w3-card box releases">
                 <h2>Releases</h2>
                 {% for r in releases %}
                 {% if r.status == "Latest" %}
-                    <div class="latest-release release">
-                 {%else %}
-                  <div class="release">
-                {% endif %}
-               
-                    <h3>{{r.version}} {{r.codename}} Release</h3>
-                    <p><strong>Status:</strong> {{r.status}}</p>
-                    <p><a href="{{r.link}}"><i class="fab fa-github"></i> View
-                            Release</a></p>
+                <div class="latest-release release">
+                    {%else %}
+                    <div class="release">
+                        {% endif %}
+
+                        <h3>{{r.version}} {{r.codename}} Release</h3>
+                        <p><strong>Status:</strong> {{r.status}}</p>
+                        <p><a href="{{r.link}}"><i class="fab fa-github"></i>
+                                View
+                                Release</a></p>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
 
-            <div class="w3-card box repo">
-                <h2>Repository</h2>
-                <p>Check out the project's repository on GitHub: <a
-                        href="https://github.com/Mustafif/MufiZ"
-                        target="_blank">GitHub Repo</a></p>
-            </div>
-        </div>
-
-        <script>
+            <script>
             var radioButtons = document.querySelectorAll('input[name="target"]');
             radioButtons.forEach(function(button) {
                 button.addEventListener('change', function() {
@@ -347,6 +432,8 @@
                 }
             }
     </script>
-
-    </body>
-</html>
+    <footer class="box w3-text-white">
+        <p>Mustafif Khan | Project licensed under <a href="https://www.gnu.org/licenses/gpl-2.0.html">GPLv2</a> | Personal website: <a href="https://mustafif.com">mustafif.com</a></p>
+    </footer>
+        </body>
+    </html>
