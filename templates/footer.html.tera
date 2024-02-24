@@ -1,6 +1,5 @@
 <footer class="w3-text-white w3-mobile">
-    <p>Mustafif Khan | Licensed under <a
-            href="https://www.gnu.org/licenses/gpl-2.0.html">GPLv2</a>
-        | Personal : <a
-            href="https://mustafif.com">mustafif.com</a></p>
+    <a href="https://mustafif.com">Developed by Mustafif Khan</a>
+    <a href="https://www.gnu.org/licenses/gpl-2.0.html">Licensed Under GPLv2</a>
+    <a href="https://github.com/Mustafif/MufiZ-Web">Powered by MufiZ-Web</a>
 </footer>

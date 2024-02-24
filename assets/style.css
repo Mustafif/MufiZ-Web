@@ -315,12 +315,27 @@ nav a {
 footer {
     left: 0;
     bottom: 0;
-    width: 100%;
-    padding: 10px 0
+    max-width: 800px;
+    margin: auto;
+    background-color: #343a40;
+    
 }
 
 footer a {
-    color: #f0ad4e
+    color: #f2f2f2;
+    width: calc(100% / 3);
+    text-align: center;
+    float: left;
+    text-decoration: none;
+    display: block;
+    padding: 14px 20px;
+    background-color: #343a40;
+}
+
+footer a:hover{
+    background-color: #f0ad4e;
+    color: #333;
+    text-decoration: none;
 }
 
 nav {

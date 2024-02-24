@@ -7,6 +7,7 @@
 
     <div class="w3-container container w3-mobile">
         <div class="w3-container box w3-mobile">
+            <div class="w3-center">
             <h2>Data Types</h2>
             <table class="package-table w3-mobile">
                 <tr>
@@ -55,9 +56,11 @@
                     <td>Object</td>
                 </tr>
             </table>
+            </div>
         </div>
         <br>
         <div class="w3-container box">
+            <div class="w3-center">
             <h2>Operators</h2>
             <table class="package-table w3-mobile">
                 <tr>
@@ -145,6 +148,7 @@
                     <td>Decrement</td>
                 </tr>
             </table>
+            </div>
         </div>
         <br>
         <div class="w3-container box w3-text-white">

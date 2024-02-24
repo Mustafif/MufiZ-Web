@@ -8,6 +8,21 @@
 
         <div class="w3-container container w3-mobile">
             <div class="w3-card box w3-mobile">
+                <h2 class="w3-text-white">Mufi-Lang?</h2>
+                <p class="w3-text-white">Mufi-Lang is a toy programming language developed using Zig
+                    and C. It is dynamic and object-oriented, with a primary
+                    goal of providing a platform that ensures memory safety and
+                    facilitates incremental improvement in functionality.
+                    Mufi-Lang is designed for general-purpose applications and
+                    offers developers a playground for experimentation while
+                    prioritizing robustness and versatility. Our vision for the
+                    future includes incorporating more mathematical aspects into
+                    the language and enhancing its applicability to diverse
+                    computational domains.
+                </p>
+            </div>
+
+            <div class="w3-card box w3-mobile">
                 <h2 class="w3-text-white">Core Languages</h2>
                 <div class="languages" id="languages">
                     <div class="language w3-mobile">
@@ -92,13 +107,19 @@
                             <tr>
                                 <td>{{ p.target }}</td>
                                 <td>{% if p.zip %}<a
-                                        href="{{ p.zip }}"><i class="fa-solid fa-download"></i></a>{% else
+                                        href="{{ p.zip }}"><i
+                                            class="fa-solid fa-download"></i></a>{%
+                                    else
                                     %}N/A{% endif %}</td>
                                 <td>{% if p.deb %}<a
-                                        href="{{ p.deb }}"><i class="fa-solid fa-download"></i></a>{% else
+                                        href="{{ p.deb }}"><i
+                                            class="fa-solid fa-download"></i></a>{%
+                                    else
                                     %}N/A{% endif %}</td>
                                 <td>{% if p.rpm %}<a
-                                        href="{{ p.rpm }}"><i class="fa-solid fa-download"></i></a>{% else
+                                        href="{{ p.rpm }}"><i
+                                            class="fa-solid fa-download"></i></a>{%
+                                    else
                                     %}N/A{% endif %}</td>
                             </tr>
                             {% endfor %}
@@ -153,6 +174,6 @@
                     }
                 }
         </script>
-        {% include "footer" %}
+            {% include "footer" %}
         </body>
     </html>
