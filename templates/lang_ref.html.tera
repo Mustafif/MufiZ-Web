@@ -6,16 +6,170 @@
     <body>
         {% include "nav" %}
 
+        {#
+        What do we need...
+
+        - Data Types
+        - Primitives
+        - Objects
+        - Variables
+        - Declaration
+        - Assignment
+        - Scope (Global, Local)
+        - Control Structures
+        - If-else
+        - Loops
+        - Functions
+        - Function Declaration
+        - Function Call
+        - Function Arguments
+        - Function Return
+        - OOP (Classes, Objects, Inheritance)
+        #}
+
         <div class="w3-container container w3-mobile">
-            <pre><code class="language-zig">// Hello World in Zig
-const std = @import("std");
-pub fn main() void {
-    const stdout = std.io.getStdOut().writer();
-    try stdout.print("Hello, {}!\n", .{"World"});
-}
-</code></pre>
+            <div class="w3-container box w3-mobile">
+                <h2>Data Types</h2>
+                <table class="w3-table-all w3-mobile">
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Type</th>
+                    </tr>
+                    <tr>
+                        <td>int</td>
+                        <td>2/4 bytes</td>
+                        <td>Primitive</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>8 bytes</td>
+                        <td>Primitive</td>
+                    </tr>
+                    <tr>
+                        <td>bool</td>
+                        <td>1 byte</td>
+                        <td>Primitive</td>
+                    </tr>
+                    <tr>
+                        <td>complex</td>
+                        <td>16 bytes</td>
+                        <td>Primitive</td>
+                    </tr>
+                    <tr>
+                        <td>string</td>
+                        <td>variable</td>
+                        <td>Object</td>
+                    </tr>
+                    <tr>
+                        <td>array</td>
+                        <td>variable</td>
+                        <td>Object</td>
+                    </tr>
+                    <tr>
+                        <td>linked list</td>
+                        <td>variable</td>
+                        <td>Object</td>
+                    </tr>
+                    <tr>
+                        <td>hash table</td>
+                        <td>variable</td>
+                        <td>Object</td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <div class="w3-container box">
+                <h2>Operators</h2>
+                <table class="w3-table-all w3-mobile">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Addition</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Subtraction</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Multiplication</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>Division</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Modulus</td>
+                    </tr>
+                    <tr>
+                        <td>==</td>
+                        <td>Equality</td>
+                    </tr>
+                    <tr>
+                        <td>!=</td>
+                        <td>Inequality</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>Greater than</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>Less than</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;=</td>
+                        <td>Greater than or equal to</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;=</td>
+                        <td>Less than or equal to</td>
+                    </tr>
+                    <tr>
+                        <td>!</td>
+                        <td>Logical NOT</td>
+                    </tr>
+                    <tr>
+                        <td>and</td>
+                        <td>Logical AND</td>
+                    </tr>
+                    <tr>
+                        <td>or</td>
+                        <td>Logical OR</td>
+                    </tr>
+                    <tr>
+                        <td>+=</td>
+                        <td>Additonal Assignment</td>
+                    </tr>
+                    <tr>
+                        <td>-=</td>
+                        <td>Subtraction Assignment</td>
+                    </tr>
+                    <tr>
+                        <td>*=</td>
+                        <td>Multiplication Assignment</td>
+                    </tr>
+                    <tr>
+                        <td>/=</td>
+                        <td>Division Assignment</td>
+                    </tr>
+                    <tr>
+                        <td>++</td>
+                        <td>Increment</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>Decrement</td>
+                    </tr>
+
+                </table>
+            </div>
         </div>
         {% include "footer" %}
-        <script src="/assets/prism.js"></script>
     </body>
 </html>
