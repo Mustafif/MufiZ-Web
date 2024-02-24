@@ -3,189 +3,168 @@
     {% set title = "Language Reference" %}
     {% set subtitle = "Explore through the depths of Mufiness" %}
     {% include "head" %}
-    <body>
-        {% include "nav" %}
+    {% include "nav" %}
 
-        {#
-        What do we need...
-
-        - Data Types
-        - Primitives
-        - Objects
-        - Variables
-        - Declaration
-        - Assignment
-        - Scope (Global, Local)
-        - Control Structures
-        - If-else
-        - Loops
-        - Functions
-        - Function Declaration
-        - Function Call
-        - Function Arguments
-        - Function Return
-        - OOP (Classes, Objects, Inheritance)
-        #}
-
-        <div class="w3-container container w3-mobile">
-            <div class="w3-container box w3-mobile">
-                <h2>Data Types</h2>
-                <table class="w3-table-all w3-mobile">
-                    <tr>
-                        <th>Name</th>
-                        <th>Size</th>
-                        <th>Type</th>
-                    </tr>
-                    <tr>
-                        <td>int</td>
-                        <td>2/4 bytes</td>
-                        <td>Primitive</td>
-                    </tr>
-                    <tr>
-                        <td>double</td>
-                        <td>8 bytes</td>
-                        <td>Primitive</td>
-                    </tr>
-                    <tr>
-                        <td>bool</td>
-                        <td>1 byte</td>
-                        <td>Primitive</td>
-                    </tr>
-                    <tr>
-                        <td>complex</td>
-                        <td>16 bytes</td>
-                        <td>Primitive</td>
-                    </tr>
-                    <tr>
-                        <td>string</td>
-                        <td>variable</td>
-                        <td>Object</td>
-                    </tr>
-                    <tr>
-                        <td>array</td>
-                        <td>variable</td>
-                        <td>Object</td>
-                    </tr>
-                    <tr>
-                        <td>linked list</td>
-                        <td>variable</td>
-                        <td>Object</td>
-                    </tr>
-                    <tr>
-                        <td>hash table</td>
-                        <td>variable</td>
-                        <td>Object</td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="w3-container box">
-                <h2>Operators</h2>
-                <table class="w3-table-all w3-mobile">
-                    <tr>
-                        <th>Operator</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td>+</td>
-                        <td>Addition</td>
-                    </tr>
-                    <tr>
-                        <td>-</td>
-                        <td>Subtraction</td>
-                    </tr>
-                    <tr>
-                        <td>*</td>
-                        <td>Multiplication</td>
-                    </tr>
-                    <tr>
-                        <td>/</td>
-                        <td>Division</td>
-                    </tr>
-                    <tr>
-                        <td>%</td>
-                        <td>Modulus</td>
-                    </tr>
-                    <tr>
-                        <td>==</td>
-                        <td>Equality</td>
-                    </tr>
-                    <tr>
-                        <td>!=</td>
-                        <td>Inequality</td>
-                    </tr>
-                    <tr>
-                        <td>&gt;</td>
-                        <td>Greater than</td>
-                    </tr>
-                    <tr>
-                        <td>&lt;</td>
-                        <td>Less than</td>
-                    </tr>
-                    <tr>
-                        <td>&gt;=</td>
-                        <td>Greater than or equal to</td>
-                    </tr>
-                    <tr>
-                        <td>&lt;=</td>
-                        <td>Less than or equal to</td>
-                    </tr>
-                    <tr>
-                        <td>!</td>
-                        <td>Logical NOT</td>
-                    </tr>
-                    <tr>
-                        <td>and</td>
-                        <td>Logical AND</td>
-                    </tr>
-                    <tr>
-                        <td>or</td>
-                        <td>Logical OR</td>
-                    </tr>
-                    <tr>
-                        <td>+=</td>
-                        <td>Additonal Assignment</td>
-                    </tr>
-                    <tr>
-                        <td>-=</td>
-                        <td>Subtraction Assignment</td>
-                    </tr>
-                    <tr>
-                        <td>*=</td>
-                        <td>Multiplication Assignment</td>
-                    </tr>
-                    <tr>
-                        <td>/=</td>
-                        <td>Division Assignment</td>
-                    </tr>
-                    <tr>
-                        <td>++</td>
-                        <td>Increment</td>
-                    </tr>
-                    <tr>
-                        <td>--</td>
-                        <td>Decrement</td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="w3-container box w3-text-white">
-                <h2>Variables</h2>
-                <p>Variables are used to store data. They are declared using the
-                    <code>var</code> keyword.</p> You may choose to initialize
-                with
-                a value or not. If not, the variable will be initialized with
-                <code>nil</code>.
-                <pre>
+    <div class="w3-container container w3-mobile">
+        <div class="w3-container box w3-mobile">
+            <h2>Data Types</h2>
+            <table class="package-table w3-mobile">
+                <tr>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Type</th>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>2/4 bytes</td>
+                    <td>Primitive</td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>8 bytes</td>
+                    <td>Primitive</td>
+                </tr>
+                <tr>
+                    <td>bool</td>
+                    <td>1 byte</td>
+                    <td>Primitive</td>
+                </tr>
+                <tr>
+                    <td>complex</td>
+                    <td>16 bytes</td>
+                    <td>Primitive</td>
+                </tr>
+                <tr>
+                    <td>string</td>
+                    <td>variable</td>
+                    <td>Object</td>
+                </tr>
+                <tr>
+                    <td>array</td>
+                    <td>variable</td>
+                    <td>Object</td>
+                </tr>
+                <tr>
+                    <td>linked list</td>
+                    <td>variable</td>
+                    <td>Object</td>
+                </tr>
+                <tr>
+                    <td>hash table</td>
+                    <td>variable</td>
+                    <td>Object</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="w3-container box">
+            <h2>Operators</h2>
+            <table class="package-table w3-mobile">
+                <tr>
+                    <th>Operator</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>+</td>
+                    <td>Addition</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Subtraction</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Multiplication</td>
+                </tr>
+                <tr>
+                    <td>/</td>
+                    <td>Division</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>Modulus</td>
+                </tr>
+                <tr>
+                    <td>==</td>
+                    <td>Equality</td>
+                </tr>
+                <tr>
+                    <td>!=</td>
+                    <td>Inequality</td>
+                </tr>
+                <tr>
+                    <td>&gt;</td>
+                    <td>Greater than</td>
+                </tr>
+                <tr>
+                    <td>&lt;</td>
+                    <td>Less than</td>
+                </tr>
+                <tr>
+                    <td>&gt;=</td>
+                    <td>Greater than or equal to</td>
+                </tr>
+                <tr>
+                    <td>&lt;=</td>
+                    <td>Less than or equal to</td>
+                </tr>
+                <tr>
+                    <td>!</td>
+                    <td>Logical NOT</td>
+                </tr>
+                <tr>
+                    <td>and</td>
+                    <td>Logical AND</td>
+                </tr>
+                <tr>
+                    <td>or</td>
+                    <td>Logical OR</td>
+                </tr>
+                <tr>
+                    <td>+=</td>
+                    <td>Additonal Assignment</td>
+                </tr>
+                <tr>
+                    <td>-=</td>
+                    <td>Subtraction Assignment</td>
+                </tr>
+                <tr>
+                    <td>*=</td>
+                    <td>Multiplication Assignment</td>
+                </tr>
+                <tr>
+                    <td>/=</td>
+                    <td>Division Assignment</td>
+                </tr>
+                <tr>
+                    <td>++</td>
+                    <td>Increment</td>
+                </tr>
+                <tr>
+                    <td>--</td>
+                    <td>Decrement</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="w3-container box w3-text-white">
+            <h2>Variables</h2>
+            <p>Variables are used to store data. They are declared using the
+                <code>var</code> keyword.</p> You may choose to initialize
+            with
+            a value or not. If not, the variable will be initialized with
+            <code>nil</code>.
+            <pre>
 <code class="language-clike">var a = 10;
 var b; // or var b = nil;</code></pre>
-            
 
             <h3>Global and Local Scopes</h3>
             <p>Variables can be declared in the global scope or local scope.
-                Global variables are declared outside of any function and can be
+                Global variables are declared outside of any function and
+                can be
                 accessed from anywhere in the program. Local variables are
-                declared inside a function and can only be accessed within that
+                declared inside a function and can only be accessed within
+                that
                 function.</p>
             <pre>
 <code class="language-clike">var a = 10; // Global
@@ -194,9 +173,124 @@ fun foo() {
 }
 print b; // Undefined variable 'b'.</code></pre>
             <br>
-</div>
         </div>
-        <script src="/assets/prism.js"></script>
-        {% include "footer" %}
-    </body>
-</html>
+        <br>
+        <div class="w3-container box w3-mobile w3-text-white">
+            <h2>Control Structures</h2>
+            <h3>If-else</h3>
+            <p>The <code>if</code> statement is used to execute a block of
+                code
+                if a condition is true. If the condition is false, the code
+                block will not be executed. The <code>else</code> statement
+                is
+                used to execute a block of code if the condition is
+                false.</p>
+            <pre>
+<code class="language-clike">if (condition) {
+    // code block
+} else {
+    // code block
+}</code></pre>
+
+            To check for multiple conditions, the <code>else if</code>
+            statement can be used.
+            <pre>
+<code class="language-clike">if (condition1) {
+    // code block
+} else if (condition2) {
+    // code block
+} else {
+    // code block
+}</code></pre>
+            <h3>Loops</h3>
+            <p>Loops are used to execute a block of code multiple times. The
+                <code>for</code> loop is used to execute a block of code a
+                specific number of times. The <code>while</code> loop is
+                used to
+                execute a block of code as long as a condition is true.</p>
+            <pre><code class="language-clike">while(condition) {
+    // code block
+}
+</code></pre>
+            The <code>for</code> loop is used to execute a block of code a
+            specific number of iterations. It has three parts: initialization,
+            condition, and increment/decrement.
+            <pre><code class="language-clike">for(var i = 0; i < 10; i++) {
+    // code block
+}</code></pre>
+        </div>
+        <br>
+        <div class="w3-container box w3-mobile w3-text-white">
+            <h2>Functions</h2>
+            <p>Functions are used to group a block of code that can be
+                executed
+                multiple times. They are declared using the <code>fun</code>
+                keyword.</p>
+            <pre>
+<code class="language-clike">fun foo() {
+    // code block
+}</code></pre>
+            <h3>Function Arguments</h3>
+            <p>Functions can take arguments. These are the values that are
+                passed to the function when it is called.</p>
+            <pre>
+<code class="language-clike">fun foo(a, b) {
+    // code block
+}</code></pre>
+            <h3>Function Return</h3>
+            <p>Functions can return a value. This is the value that the
+                function will return when it is called.</p>
+            <pre>
+<code class="language-clike">fun foo() {
+    return 10;
+}</code></pre>
+        </div>
+        <br>
+        <div class="w3-container box w3-mobile w3-text-white">
+            <h2>Object-Oriented Programming</h2>
+            <h3>Classes</h3>
+            <p>Classes are used to create objects. They are declared using
+                the
+                <code>class</code> keyword.</p> To initialize the fields in the
+            class
+            use the <code>init</code> method. Each field is accessed under the
+            <code>self</code> keyword.
+
+            <pre>
+<code class="language-clike">class Person {
+    init(name, age){
+        self.name = name; 
+        self.age = age;
+    }
+}
+</code></pre>
+            <h3>Objects</h3>
+            <p>Objects are instances of classes. They are created by calling
+                the
+                class name as a function with whichever arguments it requires.</p>
+            <pre>
+<code class="language-clike">var person = Person("John", 25);
+</code></pre>
+            <h3>Inheritance</h3>
+            <p>Inheritance is used to create a new class that is based on an
+                existing class. The new class inherits the fields and methods
+                of the existing class.</p>
+                To inherit from a class, use the <code><</code> operator.
+            <pre>
+<code class="language-clike">class Student < Person {
+    init(name, age, grade){
+        self.name = name; 
+        self.age = age;
+        self.grade = grade;
+    }
+}
+</code></pre>
+</div>
+
+{# TODO: Collection Types #}
+
+</div>
+            <script src="/assets/prism.js"></script>
+            {% include "footer" %}
+        </body>
+    </html>

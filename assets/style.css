@@ -250,7 +250,7 @@ a:hover {
     text-align: left
 }
 
-.package-table tr:nth-child(2n) {
+.package-table tr{
     background-color: #f9f9f9
 }
 
