@@ -166,10 +166,37 @@
                         <td>--</td>
                         <td>Decrement</td>
                     </tr>
-
                 </table>
             </div>
+            <br>
+            <div class="w3-container box w3-text-white">
+                <h2>Variables</h2>
+                <p>Variables are used to store data. They are declared using the
+                    <code>var</code> keyword.</p> You may choose to initialize
+                with
+                a value or not. If not, the variable will be initialized with
+                <code>nil</code>.
+                <pre>
+<code class="language-clike">var a = 10;
+var b; // or var b = nil;</code></pre>
+            
+
+            <h3>Global and Local Scopes</h3>
+            <p>Variables can be declared in the global scope or local scope.
+                Global variables are declared outside of any function and can be
+                accessed from anywhere in the program. Local variables are
+                declared inside a function and can only be accessed within that
+                function.</p>
+            <pre>
+<code class="language-clike">var a = 10; // Global
+fun foo() {
+    var b = 20; // Local
+}
+print b; // Undefined variable 'b'.</code></pre>
+            <br>
+</div>
         </div>
+        <script src="/assets/prism.js"></script>
         {% include "footer" %}
     </body>
 </html>
