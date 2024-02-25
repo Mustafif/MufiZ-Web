@@ -1,0 +1,14 @@
+[[functions]]
+signature = "now() int"
+description = "Return the current time in seconds since the Unix epoch."
+example_usage = "var x = now(); // 1708896589"
+
+[[functions]]
+signature = "now_ns() double"
+description = "Return the current time in nanoseconds since the Unix epoch."
+example_usage = "var x = now_ns(); // 1.7089e+18"
+
+[[functions]]
+signature = "now_ms() double"
+description = "Return the current time in milliseconds since the Unix epoch."
+example_usage = "var x = now_ms(); // 1.7089e+12"

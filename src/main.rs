@@ -1,5 +1,6 @@
 pub mod targets;
 pub mod version;
+pub mod stdlib;
 
 use rocket::fs::FileServer;
 use rocket::{get, launch, routes, Build, Rocket};
@@ -34,7 +35,18 @@ async fn lang_ref() -> Template {
 
 #[get("/std")]
 async fn std_() -> Template {
-    Template::render("std", context! {})
+    let time = stdlib::Functions::time().await.unwrap();
+    let math = stdlib::Functions::math().await.unwrap();
+    let fs = stdlib::Functions::fs().await.unwrap();
+    let conversion = stdlib::Functions::conversion().await.unwrap();
+    let collections = stdlib::Functions::collections().await.unwrap();
+    Template::render("std", context! {
+        time: time.functions,
+        math: math.functions,
+        fs: fs.functions,
+        conversion: conversion.functions,
+        collections: collections.functions,
+    })
 }
 
 #[launch]

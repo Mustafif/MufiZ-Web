@@ -1,0 +1,15 @@
+[[Conversions]]
+[[functions]]
+signature = "double(int) double"
+description = "Convert an integer to a floating-point number."
+example_usage = "var x = double(5); // 5.0"
+
+[[functions]]
+signature = "int(double) int"
+description = "Convert a floating-point number to an integer."
+example_usage = "var x = int(5.0); // 5"
+
+[[functions]]
+signature = "str(int/double) string"
+description = "Convert an integer or double to a string."
+example_usage = "var x = string(5); // \"5\""

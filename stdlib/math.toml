@@ -1,0 +1,84 @@
+[[functions]]
+signature = "log2(double) double"
+description = "Return the base-2 logarithm of a floating-point number."
+example_usage = "var x = log2(8.0); // 3.0"
+
+[[functions]]
+signature = "log10(double) double"
+description = "Return the base-10 logarithm of a floating-point number."
+example_usage = "var x = log10(100.0); // 2.0"
+
+[[functions]]
+signature = "sin(double) double"
+description = "Return the sine of a floating-point number."
+example_usage = "var x = sin(0.0); // 0.0"
+
+[[functions]]
+signature = "cos(double) double"
+description = "Return the cosine of a floating-point number."
+example_usage = "var x = cos(0.0); // 1.0"
+
+[[functions]]
+signature = "tan(double) double"
+description = "Return the tangent of a floating-point number."
+example_usage = "var x = tan(0.0); // 0.0"
+
+[[functions]]
+signature = "asin(double) double"
+description = "Return the arcsine of a floating-point number."
+example_usage = "var x = asin(0.0); // 0.0"
+
+[[functions]]
+signature = "acos(double) double"
+description = "Return the arccosine of a floating-point number."
+example_usage = "var x = acos(1.0); // 0.0"
+
+[[functions]]
+signature = "atan(double) double"
+description = "Return the arctangent of a floating-point number."
+example_usage = "var x = atan(0.0); // 0.0"
+
+[[functions]]
+signature = "sqrt(double) double"
+description = "Return the square root of a floating-point number."
+example_usage = "var x = sqrt(4.0); // 2.0"
+
+[[functions]]
+signature = "pow(numeric, double) double"
+description = "Return the value of a number raised to the power of another number."
+example_usage = "var x = pow(2.0, 3.0); // 8.0"
+
+[[functions]]
+signature = "abs(numeric) (double/int)"
+description = "Return the absolute value of a number."
+example_usage = "var x = abs(-5); // 5"
+
+[[functions]]
+signature = "phase(complex) double"
+description = "Return the phase of a complex number."
+example_usage = "var x = phase(complex(3.0, 4.0)); // 0.927295"
+
+[[functions]]
+signature = "ceil(double) int"
+description = "Return the smallest integer greater than or equal to a floating-point number."
+example_usage = "var x = ceil(3.14); // 4"
+
+[[functions]]
+signature = "floor(double) int"
+description = "Return the largest integer less than or equal to a floating-point number."
+example_usage = "var x = floor(3.14); // 3"
+
+[[functions]]
+signature = "round(double) int"
+description = "Return the value of a floating-point number rounded to the nearest integer."
+example_usage = "var x = round(3.14); // 3"
+
+[[functions]]
+signature = "pi() double"
+description = "Return the value of the mathematical constant π."
+example_usage = "var x = pi(); // 3.14159"
+
+[[functions]]
+signature = "rand() int"
+description = "Random number generator using Sfc64."
+example_usage = "var x = rand(); // 1374538710"

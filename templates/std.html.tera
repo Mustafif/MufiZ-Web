@@ -27,413 +27,70 @@
 
             <div class="w3-card box w3-mobile w3-text-white">
                 <h2>Math</h2>
+                {% for m in math %}
                 <div
                     class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>log2(double) double</code></pre>
-                    <p>Return the base-2 logarithm of a floating-point
-                        number.</p>
+                    <pre><code>{{m.signature}}</code></pre>
+                    <p>{{m.description}}</p>
                     <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = log2(8.0); // 3.0 </code></pre>
+                    <pre><code class="language-clike">{{m.example_usage}}</code></pre>
                 </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>log10(double) double</code></pre>
-                    <p>Return the base-10 logarithm of a floating-point
-                        number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = log10(100.0); // 2.0 </code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>sin(double) double</code></pre>
-                    <p>Return the sine of a floating-point number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = sin(0.0); // 0.0 </code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>cos(double) double</code></pre>
-                    <p>Return the cosine of a floating-point number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = cos(0.0); // 1.0 </code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>tan(double) double</code></pre>
-                    <p>Return the tangent of a floating-point number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = tan(0.0); // 0.0 </code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>asin(double) double</code></pre>
-                    <p>Return the arcsine of a floating-point number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = asin(0.0); // 0.0 </code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>acos(double) double</code></pre>
-                    <p>Return the arccosine of a floating-point number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = acos(1.0); // 0.0 </code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>atan(double) double</code></pre>
-                    <p>Return the arctangent of a floating-point number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = atan(0.0); // 0.0 </code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>sqrt(double) double</code></pre>
-                    <p>Return the square root of a floating-point number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = sqrt(4.0); // 2.0 </code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>pow(numeric, double) double</code></pre>
-                    <p>Return the value of a number raised to the power of
-                        another
-                        number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = pow(2.0, 3.0); // 8.0 </code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>abs(numeric) (double/int) </code></pre>
-                    <p>Return the absolute value of a number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = abs(-5); // 5 </code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>phase(complex) double</code></pre>
-                    <p>Return the phase of a complex number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = phase(complex(3.0, 4.0)); // 0.927295</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>ceil(double) int</code></pre>
-                    <p>Return the smallest integer greater than or equal to a
-                        floating-point number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = ceil(3.14); // 4</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>floor(double) int</code></pre>
-                    <p>Return the largest integer less than or equal to a
-                        floating-point number.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = floor(3.14); // 3</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>round(double) int</code></pre>
-                    <p>Return the value of a floating-point number rounded to
-                        the
-                        nearest integer.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = round(3.14); // 3</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>pi() double</code></pre>
-                    <p>Return the value of the mathematical constant π.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = pi(); // 3.14159</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>rand() int</code></pre>
-                    <p>Random number generator using Sfc64</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = rand(); // 1374538710</code></pre>
-                </div>
+                {% endfor %}
+
             </div>
 
             <div class="w3-card box w3-mobile w3-text-white">
                 <h2>Conversions</h2>
+                {% for c in conversion %}
                 <div
                     class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>double(int) double</code></pre>
-                    <p>Convert an integer to a floating-point number.</p>
+                    <pre><code>{{c.signature}}</code></pre>
+                    <p>{{c.description}}</p>
                     <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = double(5); // 5.0</code></pre>
+                    <pre><code class="language-clike">{{c.example_usage}}</code></pre>
                 </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>int(double) int</code></pre>
-                    <p>Convert a floating-point number to an integer.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = int(5.0); // 5</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>str(int/double) string</code></pre>
-                    <p>Convert an integer or double to a string.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = string(5); // "5"</code></pre>
-                </div>
+                {% endfor %}
             </div>
 
             <div class="w3-card box w3-mobile w3-text-white">
                 <h2>Time</h2>
+
+                {% for t in time %}
                 <div
                     class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>now() int</code></pre>
-                    <p>Return the current time in seconds since the Unix
-                        epoch.</p>
+                    <pre><code>{{t.signature}}</code></pre>
+                    <p>{{t.description}}</p>
                     <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = now(); // 1708896589</code></pre>
+                    <pre><code class="language-clike">{{t.example_usage}}</code></pre>
                 </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>now_ns() double</code></pre>
-                    <p>Return the current time in nanoseconds since the Unix
-                        epoch.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = now_ns(); // 1.7089e+18</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>now_ms() double</code></pre>
-                    <p>Return the current time in milliseconds since the Unix
-                        epoch.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = now_ms(); // 1.7089e+12</code></pre>
-                </div>
+                {% endfor %}
+
             </div>
+
             <div class="w3-card box w3-mobile w3-text-white">
                 <h2>File System</h2>
+                {% for f in fs %}
                 <div
                     class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>create_file(string) bool</code></pre>
-                    <p>Create a new file with the specified path.</p>
+                    <pre><code>{{f.signature}}</code></pre>
+                    <p>{{f.description}}</p>
                     <p>Example Usage:</p>
-                    <pre><code class="language-clike">if(create_file("file.txt")){
-    print "Created file `file.txt`";
-} else {
-    print "Failed to create file `file.txt`";
-}                   </code></pre>
+                    <pre><code class="language-clike">{{f.example_usage}}</code></pre>
                 </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>write_file(string, string) bool</code></pre>
-                    <p>Write to a file with the specified path and data.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">if(write_file("file.txt", "Hello World!")){
-    print "Wrote to file `file.txt`";
-} else {
-    print "Failed to write to file `file.txt`";
-}                   </code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>read_file(string) string</code></pre>
-                    <p>Read from a file with the specified path.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var str = read_file("file.txt"); // "Hello, World!"</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>delete_file(string) bool</code></pre>
-                    <p>Delete a file with the specified path.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">if(delete_file("file.txt")){
-    print "Deleted file `file.txt`";
-} else {
-    print "Failed to delete file `file.txt`";
-}</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>create_dir(string) bool</code></pre>
-                    <p>Create a new directory with the specified path.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">if(create_dir("files")){
-    print "Created directory `files`"; 
-} else {
-    print "Failed to create directory `files`";
-} </code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>delete_dir(string) bool</code></pre>
-                    <p>Delete a directory with the specified path.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">if(delete_dir("files){
-    print "Deleted directory `files`";
-} else {
-    print "Failed to delete directory `files`";
-}
-                    </code></pre>
-                </div>
+                {% endfor %}
             </div>
 
             <div class="w3-card box w3-mobile w3-text-white">
                 <h2>Collections</h2>
+                {% for c in collections %}
                 <div
                     class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>array(int) array</code></pre>
-                    <p>Create a dynamic array with an optional starting capacity
-                        or it initializes an empty array.</p>
+                    <pre><code>{{c.signature}}</code></pre>
+                    <p>{{c.description}}</p>
                     <p>Example Usage:</p>
-                    <pre><code class="language-clike">var a = array(); // []</code></pre>
+                    <pre><code class="language-clike">{{c.example_usage}}</code></pre>
                 </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>linked_list() linked list</code></pre>
-                    <p>Create a new empty linked list</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var ll = linked_list(); // []</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>hash_table() hash table</code></pre>
-                    <p>Create a new empty hash table</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var ht = hash_table(); // {}</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>push(list, any, ...) nil</code></pre>
-                    <p>Append elements to the end of a list.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">push(a, 1, 2, 3); // a = [1, 2, 3]</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>push_front(linked_list, any, ...)</code></pre>
-                    <p>Append elements to the front of a linked list.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">push_front(ll, 1, 2, 3); // ll = [3, 2, 1]</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>pop(list) any</code></pre>
-                    <p>Remove and return the last element of a list.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = pop(a); // x = 3, a = [1, 2]</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>pop_front(linked_list) any</code></pre>
-                    <p>Remove and return the first element of a linked list.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = pop_front(ll); // x = 3, ll = [2, 1]</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>nth(list, int) any</code></pre>
-                    <p>Get the value from a specified index in a list.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = nth(a, 1); // x = 2</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>is_empty(collection) bool</code></pre>
-                    <p>Checks if a collection type is empty.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">if(is_empty(a)){
-    print "Array is empty";
-} else {
-    print "Array is not empty";
-}</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>sort(list) nil</code></pre>
-                    <p>Sorts a list (qsort for array, merge sort for linked
-                        list)</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var a2 = array();
-push(a2, 3, 1, 2);
-sort(a2); // a2 = [1, 2, 3]</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>reverse(list) nil</code></pre>
-                    <p>Reverses a list</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">reverse(a); // a = [3, 2, 1]</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>put(table, string, any) nil</code></pre>
-                    <p>Inserts a new entry into a hash table with a string key
-                        and any value</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">put(ht, "key", "value"); // ht = {key: value}</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>get(table, string) any</code></pre>
-                    <p>Get the value from a hash table with a specified key.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = get(ht, "key"); // x = "value"</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>remove(table, string) nil</code></pre>
-                    <p>Remove an entry from a hash table with a specified
-                        key.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">remove(ht, "key"); // ht = {}</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>equal_list(list, list) bool</code></pre>
-                    <p>Checks if two lists are equivalent (must be same list
-                        type)</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var a1 = array();
-push(a1, 1, 2, 3);
-var a2 = array();
-push(a2, 1, 2, 3);
-if(equal_list(a1, a2)){
-    print "Lists are equivalent";
-} else {
-    print "Lists are not equivalent";
-}</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>contains(collection, any) bool</code></pre>
-                    <p>Checks if a collection type contains a specified
-                        value.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">if(contains(a, 1)){
-    print "Array contains 1";
-} else {
-    print "Array does not contain 1";
-}</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>len(collection) int</code></pre>
-                    <p>Returns the count of a collection.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = len(a); // x = 3</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>range(int, int) array</code></pre>
-                    <p>Returns an array with range [a, b)</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var a = range(0, 5); // a = [0, 1, 2, 3, 4]</code></pre>
-                </div>
-                <div
-                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
-                    <pre><code>search(list, any) int</code></pre>
-                    <p>Searches for an item in a list and returns its index.</p>
-                    <p>Example Usage:</p>
-                    <pre><code class="language-clike">var x = search(a, 2); // x = 1</code></pre>
-                </div>
+                {% endfor %}
             </div>
             <script src="/assets/prism.js"></script>
             {% include "footer" %}

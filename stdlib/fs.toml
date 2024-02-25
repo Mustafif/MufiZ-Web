@@ -1,0 +1,71 @@
+[[functions]]
+signature = "create_file(string) bool"
+description = """
+Create a new file with the specified path.
+"""
+example_usage = """
+if(create_file("file.txt")){
+    print "Created file `file.txt`";
+} else {
+    print "Failed to create file `file.txt`";
+}
+"""
+
+[[functions]]
+signature = "write_file(string, string) bool"
+description = """
+Write to a file with the specified path and data.
+"""
+example_usage = """
+if(write_file("file.txt", "Hello World!")){
+    print "Wrote to file `file.txt`";
+} else {
+    print "Failed to write to file `file.txt`";
+}                   
+"""
+
+[[functions]]
+signature = "read_file(string) string"
+description = """
+Read from a file with the specified path.
+"""
+example_usage = "var str = read_file(\"file.txt\"); // \"Hello, World!\""
+
+[[functions]]
+signature = "delete_file(string) bool"
+description = """
+Delete a file with the specified path.
+"""
+example_usage = """
+if(delete_file("file.txt")){
+    print "Deleted file `file.txt`";
+} else {
+    print "Failed to delete file `file.txt`";
+}
+"""
+
+[[functions]]
+signature = "create_dir(string) bool"
+description = """
+Create a new directory with the specified path.
+"""
+example_usage = """
+if(create_dir("files")){
+    print "Created directory `files`"; 
+} else {
+    print "Failed to create directory `files`";
+}
+"""
+
+[[functions]]
+signature = "delete_dir(string) bool"
+description = """
+Delete a directory with the specified path.
+"""
+example_usage = """
+if(delete_dir("files){
+    print "Deleted directory `files`";
+} else {
+    print "Failed to delete directory `files`";
+}
+"""

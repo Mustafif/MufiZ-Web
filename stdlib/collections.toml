@@ -1,0 +1,120 @@
+[[functions]]
+signature = "array(int) array"
+description = "Create a dynamic array with an optional starting capacity or initialize an empty array."
+example_usage = "var a = array(); // []"
+
+[[functions]]
+signature = "linked_list() linked list"
+description = "Create a new empty linked list."
+example_usage = "var ll = linked_list(); // []"
+
+[[functions]]
+signature = "hash_table() hash table"
+description = "Create a new empty hash table."
+example_usage = "var ht = hash_table(); // {}"
+
+[[functions]]
+signature = "push(list, any, ...)"
+description = "Append elements to the end of a list."
+example_usage = "push(a, 1, 2, 3); // a = [1, 2, 3]"
+
+[[functions]]
+signature = "push_front(linked_list, any, ...)"
+description = "Append elements to the front of a linked list."
+example_usage = "push_front(ll, 1, 2, 3); // ll = [3, 2, 1]"
+
+[[functions]]
+signature = "pop(list) any"
+description = "Remove and return the last element of a list."
+example_usage = "var x = pop(a); // x = 3, a = [1, 2]"
+
+[[functions]]
+signature = "pop_front(linked_list) any"
+description = "Remove and return the first element of a linked list."
+example_usage = "var x = pop_front(ll); // x = 3, ll = [2, 1]"
+
+[[functions]]
+signature = "nth(list, int) any"
+description = "Get the value from a specified index in a list."
+example_usage = "var x = nth(a, 1); // x = 2"
+
+[[functions]]
+signature = "is_empty(collection) bool"
+description = "Check if a collection type is empty."
+example_usage = """
+if(is_empty(a)){
+    print "Array is empty";
+} else {
+    print "Array is not empty";
+}
+"""
+
+[[functions]]
+signature = "sort(list) nil"
+description = "Sort a list (qsort for array, merge sort for linked list)."
+example_usage = """
+var a2 = array();
+push(a2, 3, 1, 2);
+sort(a2); // a2 = [1, 2, 3]
+"""
+
+[[functions]]
+signature = "reverse(list) nil"
+description = "Reverse a list."
+example_usage = "reverse(a); // a = [3, 2, 1]"
+
+[[functions]]
+signature = "put(table, string, any) nil"
+description = "Insert a new entry into a hash table with a string key and any value."
+example_usage = "put(ht, 'key', 'value'); // ht = {'key': 'value'}"
+
+[[functions]]
+signature = "get(table, string) any"
+description = "Get the value from a hash table with a specified key."
+example_usage = "var x = get(ht, 'key'); // x = 'value'"
+
+[[functions]]
+signature = "remove(table, string) nil"
+description = "Remove an entry from a hash table with a specified key."
+example_usage = "remove(ht, 'key'); // ht = {}"
+
+[[functions]]
+signature = "equal_list(list, list) bool"
+description = "Check if two lists are equivalent (must be the same list type)."
+example_usage = """
+var a1 = array();
+push(a1, 1, 2, 3);
+var a2 = array();
+push(a2, 1, 2, 3);
+if(equal_list(a1, a2)){
+    print "Lists are equivalent";
+} else {
+    print "Lists are not equivalent";
+}
+"""
+
+[[functions]]
+signature = "contains(collection, any) bool"
+description = "Check if a collection type contains a specified value."
+example_usage = """
+if(contains(a, 1)){
+    print "Array contains 1";
+} else {
+    print "Array does not contain 1";
+}
+"""
+
+[[functions]]
+signature = "len(collection) int"
+description = "Return the count of a collection."
+example_usage = "var x = len(a); // x = 3"
+
+[[functions]]
+signature = "range(int, int) array"
+description = "Return an array with range [a, b)."
+example_usage = "var a = range(0, 5); // a = [0, 1, 2, 3, 4]"
+
+[[functions]]
+signature = "search(list, any) int"
+description = "Search for an item in a list and return its index."
+example_usage = "var x = search(a, 2); // x = 1"
