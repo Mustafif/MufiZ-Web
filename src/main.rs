@@ -40,12 +40,14 @@ async fn std_() -> Template {
     let fs = stdlib::Functions::fs().await.unwrap();
     let conversion = stdlib::Functions::conversion().await.unwrap();
     let collections = stdlib::Functions::collections().await.unwrap();
+    let net = stdlib::Functions::net().await.unwrap();
     Template::render("std", context! {
         time: time.functions,
         math: math.functions,
         fs: fs.functions,
         conversion: conversion.functions,
         collections: collections.functions,
+        net: net.functions
     })
 }
 

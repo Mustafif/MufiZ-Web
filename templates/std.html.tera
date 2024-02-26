@@ -92,6 +92,60 @@
                 </div>
                 {% endfor %}
             </div>
+
+            <div class="w3-card box w3-mobile">
+                <h2 class="w3-text-white">Networking</h2> 
+                <table class="package-table">
+                    <tr>
+                        <th>Content Type</th>
+                        <th>Integer Value</th>
+                    </tr>
+                    <tr>
+                        <td>PlainText</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>JSON</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>XML</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>PDF</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>JPEG</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>PNG</td>
+                        <td>6</td>
+                    </tr>
+                </table>
+                <div class="w3-text-white">
+                <p>
+                    The functions example usages are based off of testing with a simple webserver which is found  <a href="https://github.com/Mustafif/methods_server">here!</a>
+                    They are not guaranteed to work with all web servers, that may require more complex content types, or other headers. These functions are built for simple 
+                    requests and responses.
+                </p>
+                {% for n in net %}
+                <div
+                    class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
+                    <pre><code>{{n.signature}}</code></pre>
+                    <p>{{n.description}}</p>
+                    <p>Example Usage:</p>
+                    <pre><code class="language-clike">{{n.example_usage}}</code></pre>
+                </div>
+                {% endfor %}
+                </div>
+            </div>
             <script src="/assets/prism.js"></script>
             {% include "footer" %}
         </body>

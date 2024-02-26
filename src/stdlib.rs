@@ -8,6 +8,7 @@ const CONVERSION: &str = "stdlib/conversion.toml";
 const FS: &str = "stdlib/fs.toml";
 const MATH: &str = "stdlib/math.toml";
 const TIME: &str = "stdlib/time.toml";
+const NET : &str = "stdlib/net.toml";
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
 pub struct Function{
@@ -39,5 +40,8 @@ impl Functions{
     }
     pub async fn time() -> Result<Self>{
         Self::from_file(TIME).await
+    }
+    pub async fn net() -> Result<Self>{
+        Self::from_file(NET).await
     }
 }
