@@ -123,6 +123,34 @@
                 </div>
             </div>
 
+            <div class="w3-card box w3-mobile w3-text-white">
+                <h2>Installation</h2>
+
+                <h3>Debian Package</h3>
+                <p>Download the latest DEB package and use the following
+                    commands: </p>
+                <pre class="language-bash"><code>$ sudo dpkg -i mufiz_{version}_{target}.deb</code></pre>
+
+                <h3>RPM Package</h3>
+                <p>Download the latest RPM package and use the following
+                    commands: </p>
+                <pre class="language-bash"><code>$ sudo rpm -i mufiz_{version}_{target}.rpm</code></pre>
+
+                <h3>Linux/MacOS Zip</h3>
+                <p>Download the latest zip package and use the following
+                    commands: </p>
+                <pre class="language-bash"><code>$ unzip mufiz_{version}_{target}.zip
+$ sudo mv mufiz /usr/local/bin</code></pre>
+
+                    <h3>Windows</h3>
+                    <ol>
+<li>Download the <code>mufiz_{version}_{target}.zip</code> file from the releases page.</li>
+<li>Extract the zip file to a directory of your choice.</li>
+<li>Add the directory to your PATH environment variable.</li>
+<li>Open a new terminal and run <code>mufiz --version</code> to verify the installation.</li>
+                    </ol>
+            </div>
+
             <div class="w3-card box releases w3-mobile">
                 <h2>Releases</h2>
                 {% for r in releases %}

@@ -294,7 +294,6 @@ print b; // Undefined variable 'b'.</code></pre>
 {# TODO: Collection Types #}
 
 </div>
-            <script src="/assets/prism.js"></script>
             {% include "footer" %}
         </body>
     </html>

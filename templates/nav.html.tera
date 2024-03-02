@@ -19,7 +19,7 @@
     <a class="w3-mobile" href="/std">
         <i class="fa fa-cubes"></i> Standard Library
     </a>
-    <a class="w3-mobile" href="#news">
+    <a class="w3-mobile" href="https://mufiz.hashnode.dev/" target="_blank">
         <i class="fa fa-newspaper"></i> News
     </a>
 </nav>
