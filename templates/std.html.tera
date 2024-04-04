@@ -21,8 +21,8 @@
                 </p>
                 <h3>Multi-types Names</h3>
                 <h6>Numeric: (Integer, Double, Complex)</h6>
-                <h6>Collection: (Array, Linked List, Hash Table)</h6>
-                <h6>List: (Array, Linked List)</h6>
+                <h6>Collection: (Array, Linked List, Hash Table, FVec, Matrix)</h6>
+                <h6>List: (Array, Linked List, FVec)</h6>
             </div>
 
             <div class="w3-card box w3-mobile w3-text-white">
