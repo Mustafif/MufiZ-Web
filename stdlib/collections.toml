@@ -14,6 +14,20 @@ description = "Create a new empty hash table."
 example_usage = "var ht = hash_table(); // {}"
 
 [[functions]]
+signature = "matrix(int, int) matrix"
+description = "Create a matrix with the specified dimensions."
+example_usage = """var m = matrix(2, 2);
+print m;
+0 0
+0 0
+"""
+
+[[functions]]
+signature = "fvec(int/array) fvec"
+description = "Create a float vector with size or an array of values."
+example_usage = "var v = fvec(3); // [0.0, 0.0, 0.0]"
+
+[[functions]]
 signature = "push(list, any, ...)"
 description = "Append elements to the end of a list."
 example_usage = "push(a, 1, 2, 3); // a = [1, 2, 3]"
@@ -64,6 +78,11 @@ description = "Reverse a list."
 example_usage = "reverse(a); // a = [3, 2, 1]"
 
 [[functions]]
+signature = "merge(list, list) list"
+description = "Merge two lists into a single list."
+example_usage = "var a3 = merge(a, a2); // a3 = [1, 2, 3, 1, 2, 3]"
+
+[[functions]]
 signature = "put(table, string, any) nil"
 description = "Insert a new entry into a hash table with a string key and any value."
 example_usage = "put(ht, 'key', 'value'); // ht = {'key': 'value'}"
@@ -80,7 +99,7 @@ example_usage = "remove(ht, 'key'); // ht = {}"
 
 [[functions]]
 signature = "equal_list(list, list) bool"
-description = "Check if two lists are equivalent (must be the same list type)."
+description = "Check if two lists are equivalent (must be the same list type), you can also use `==`."
 example_usage = """
 var a1 = array();
 push(a1, 1, 2, 3);
@@ -115,6 +134,145 @@ description = "Return an array with range [a, b)."
 example_usage = "var a = range(0, 5); // a = [0, 1, 2, 3, 4]"
 
 [[functions]]
+signature = "linspace(float, float, int) fvec"
+description = "Return a float vector with n evenly spaced values between a and b."
+example_usage = "var v = linspace(0.0, 1.0, 5); // v = [0.0, 0.25, 0.5, 0.75, 1.0]"
+
+[[functions]]
 signature = "search(list, any) int"
 description = "Search for an item in a list and return its index."
 example_usage = "var x = search(a, 2); // x = 1"
+
+[[functions]]
+signature = "interp1(fvec, fvec, float) float"
+description = "Interpolate a value from two float vectors."
+example_usage = """
+var x = fvec(3);
+var y = fvec(3);
+push(x, 0.0, 1.0, 2.0);
+push(y, 0.0, 1.0, 4.0);
+var z = interp1(x, y, 1.5); // z = 2.5
+"""
+
+[[functions]]
+signature = "sum(list) double"
+description = "Return the sum of a list."
+example_usage = "var x = sum(a); // x = 6"
+
+[[functions]]
+signature = "mean(list) double"
+description = "Return the mean of a list."
+example_usage = "var x = mean(a); // x = 2.0"
+
+[[functions]]
+signature = "var(list) double"
+description = "Return the variance of a list."
+example_usage = "var x = var(a); // x = 1.0"
+
+[[functions]]
+signature = "std(list) double"
+description = "Return the standard deviation of a list."
+example_usage = "var x = std(a); // x = 1.0"
+
+[[functions]]
+signature = "maxl(list) any"
+description = "Return the maximum value of a list."
+example_usage = "var x = maxl(a); // x = 3"
+
+[[functions]]
+signature = "minl(list) any"
+description = "Return the minimum value of a list."
+example_usage = "var x = minl(a); // x = 1"
+
+[[functions]]
+signature = "set_row(matrix, int, array) nil"
+description = "Set a row in a matrix with an array."
+example_usage = """
+var m = matrix(2, 2);
+var a = array();
+push(a, 1, 2);
+set_row(m, 0, a);
+print m;
+1 2
+0 0
+"""
+
+[[functions]]
+signature = "set_col(matrix, int, array) nil"
+description = "Set a column in a matrix with an array."
+example_usage = """
+var m = matrix(2, 2);
+var a = array();
+push(a, 1, 2);
+set_col(m, 0, a);
+print m;
+1 0
+2 0
+"""
+
+[[functions]]
+signature = "set(matrix, int, int, any) nil"
+description = "Set a value in a matrix at a specified row and column."
+example_usage = """
+var m = matrix(2, 2);
+set(m, 0, 0, 1);
+print m;
+1 0
+0 0
+"""
+
+[[functions]]
+signature = "kolasa() matrix"
+description = "Create a Kolasa matrix."
+example_usage = """
+var m = kolasa();
+print m;
+1 2 3
+4 5 6
+7 8 9
+"""
+
+[[functions]]
+signature = "rref(matrix) void"
+description = "Return the reduced row echelon form of a matrix."
+example_usage = """
+var k = kolasa();
+rref(k);
+print k;
+1 0 -1
+0 1 2
+0 0 0
+"""
+
+[[functions]]
+signature = "rank(matrix) int"
+description = "Return the rank of a matrix."
+example_usage = "var x = rank(k); // x = 2"
+
+[[functions]]
+signature = "det(matrix) float"
+description = "Return the determinant of a matrix."
+example_usage = "var x = det(k); // x = 0.0"
+
+[[functions]]
+signature = "transpose(matrix) matrix"
+description = "Return the transpose of a matrix."
+example_usage = """
+var k = kolasa();
+var t = transpose(k);
+print t;
+1 4 7
+2 5 8
+3 6 9
+"""
+
+[[functions]]
+signature = "lu(matrix) (matrix, matrix)"
+description = "Return the LU decomposition of a matrix."
+example_usage = """
+var k = kolasa();
+var lu_val = lu(k);
+print nth(lu_val, 0, 0);
+print nth(lu_val, 1, 1);
+"""
+

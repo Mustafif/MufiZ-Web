@@ -79,6 +79,17 @@ description = "Return the value of the mathematical constant π."
 example_usage = "var x = pi(); // 3.14159"
 
 [[functions]]
-signature = "rand() int"
+signature = "sfc() int"
 description = "Random number generator using Sfc64."
-example_usage = "var x = rand(); // 1374538710"
+example_usage = "var x = sfc(); // 1374538710"
+
+[[functions]]
+signature = "rand() double"
+description = "Return a random floating-point number in the range [0, 1)."
+example_usage = "var x = rand(); // 0.267054"
+
+[[functions]]
+signature = "randn() double"
+description = "Return a random floating-point number from a normal distribution with mean 0 and standard deviation 1."
+example_usage = "var x = randn(); // 0.260098"
+

@@ -1,55 +1,76 @@
+# [[functions]]
+# signature = "get_req(string, int, string, string) string"
+# description = """
+# This functions sends a GET request to the given URL with the respective integer code for the ContentType 
+# and optional string parameters for User-Agent and Authorization headers. The function returns the response 
+# body as a string. 
+# """
+# example_usage = """
+# var res = get_req("http://127.0.0.1:8000/data", 0);
+# print res;
+# // Output: 
+# Default
+# """
+
+# [[functions]]
+# signature = "post_req(string, string, int, string, string) string"
+# description = """
+# This functions sends a POST request to the given URL with the data to be written to it and the respective integer code for the ContentType
+# and optional string parameters for User-Agent and Authorization headers. The function returns the response
+# body as a string.
+# """
+# example_usage = """
+# var res = post_req("http://127.0.0.1:8000/pos_data", "new value from post", 0);
+# print res;
+# // Output:
+# Data updated to new value from post
+# """
+
+# [[functions]]
+# signature = "put_req(string, string, int, string, string) string"
+# description = """
+# This functions sends a PUT request to the given URL with the data to be written to it and the respective integer code for the ContentType
+# and optional string parameters for User-Agent and Authorization headers. The function returns the response
+# body as a string.
+# """
+# example_usage = """
+# var res = put_req("http://127.0.0.1:8000/put_data", "new value from put", 0);
+# print res;
+# // Output:
+# Data updated to new value from put
+# """
+
+# [[functions]]
+# signature = "delete_req(string, int, string, string) string"
+# description = """
+# This functions sends a DELETE request to the given URL with the respective integer code for the ContentType
+# and optional string parameters for User-Agent and Authorization headers. The function returns the response
+# body as a string.
+# """
+# example_usage = """
+# var res = delete_req("http://127.0.0.1:8000/del_data", 0);
+# print res;
+# // Output:
+# Data deleted
+# """
+
 [[functions]]
-signature = "get_req(string, int, string, string) string"
+signature = "get_req(string) string"
 description = """
-This functions sends a GET request to the given URL with the respective integer code for the ContentType 
-and optional string parameters for User-Agent and Authorization headers. The function returns the response 
+This functions sends a GET request to the given URL using cURL. The function returns the response
 body as a string. 
 """
 example_usage = """
-var res = get_req("http://127.0.0.1:8000/data", 0);
-print res;
-// Output: 
-Default
-"""
-
-[[functions]]
-signature = "post_req(string, string, int, string, string) string"
-description = """
-This functions sends a POST request to the given URL with the data to be written to it and the respective integer code for the ContentType
-and optional string parameters for User-Agent and Authorization headers. The function returns the response
-body as a string.
-"""
-example_usage = """
-var res = post_req("http://127.0.0.1:8000/pos_data", "new value from post", 0);
-print res;
-// Output:
-Data updated to new value from post
-"""
-
-[[functions]]
-signature = "put_req(string, string, int, string, string) string"
-description = """
-This functions sends a PUT request to the given URL with the data to be written to it and the respective integer code for the ContentType
-and optional string parameters for User-Agent and Authorization headers. The function returns the response
-body as a string.
-"""
-example_usage = """
-var res = put_req("http://127.0.0.1:8000/put_data", "new value from put", 0);
-print res;
-// Output:
-Data updated to new value from put
-"""
-
-[[functions]]
-signature = "delete_req(string, int, string, string) string"
-description = """
-This functions sends a DELETE request to the given URL with the respective integer code for the ContentType
-and optional string parameters for User-Agent and Authorization headers. The function returns the response
-body as a string.
-"""
-example_usage = """
-var res = delete_req("http://127.0.0.1:8000/del_data", 0);
-print res;
-// Output:
-Data deleted
+print get_req("https://httpbin.org/get");
+// Sample Output:
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Host": "httpbin.org",
+    "X-Amzn-Trace-Id": ""
+  },
+  "origin": "",
+  "url": "https://httpbin.org/get"
+}
 """
