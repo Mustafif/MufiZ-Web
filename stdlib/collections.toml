@@ -28,6 +28,26 @@ description = "Create a float vector with size or an array of values."
 example_usage = "var v = fvec(3); // [0.0, 0.0, 0.0]"
 
 [[functions]]
+signature = "slice(list, int, int) list"
+description = "Return a slice of a list from start to end."
+example_usage = """var a = array(3, true);
+push(a, 1, 2, 3);
+print slice(a, 0, 2);
+[1, 2]
+"""
+
+[[functions]]
+signature = "splice(list, int, int) list"
+description = "Remove a slice of a list from start to end."
+example_usage = """var a = array(3, true);
+push(a, 1, 2, 3);
+print splice(a, 0, 2);
+[1, 2]
+print a;
+[3]
+"""
+
+[[functions]]
 signature = "push(list, any, ...)"
 description = "Append elements to the end of a list."
 example_usage = "push(a, 1, 2, 3); // a = [1, 2, 3]"
@@ -275,4 +295,3 @@ var lu_val = lu(k);
 print nth(lu_val, 0, 0);
 print nth(lu_val, 1, 1);
 """
-

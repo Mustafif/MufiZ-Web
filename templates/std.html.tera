@@ -97,7 +97,7 @@
                 <h2 class="w3-text-white">Networking</h2>
                 <p>Requires <code>enable_fs</code> feature that is only
                     available for Unix systems with cURL.</p>
-                {# <table class="package-table">
+                <table class="package-table">
                     <tr>
                         <th>Content Type</th>
                         <th>Integer Value</th>
@@ -140,7 +140,7 @@
                         that may require more complex content types, or other
                         headers. These functions are built for simple
                         requests and responses.
-                    </p> #}
+                    </p>
                     {% for n in net %}
                     <div
                         class="w3-border w3-border-white w3-round w3-padding w3-margin w3-mobile">
