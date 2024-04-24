@@ -86,7 +86,7 @@
             <div class="w3-card w3-mobile">
                 <button onclick="toggleAccordion('packageAccordion')"
                     class="accordion-button w3-large"
-                    id="accordionButton">Packages</button>
+                    id="accordionButton" style="background-color: #f0ad4e;">Packages</button>
                 <div id="packageAccordion" class="accordion-content">
                     <table class="package-table">
                         <thead>

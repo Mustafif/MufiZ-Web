@@ -250,13 +250,18 @@ a:hover {
     text-align: left
 }
 
+.package-table th{
+    color: black;
+}
+
 .package-table tr{
-    background-color: #f9f9f9
+    background-color: #343a40;
+    color: #f2f2f2;
 }
 
 .accordion-button,
 .package-table tr:hover {
-    background-color: #f2f2f2
+    background-color: rgb(63, 155, 186);
 }
 
 .w3-card {
@@ -294,7 +299,9 @@ nav a {
 
 .accordion-content {
     display: none;
-    padding: 20px
+    padding: 20px;
+    background-color: #343a40;
+    border-radius: 10px;
 }
 
 .accordion-button.active::after {
