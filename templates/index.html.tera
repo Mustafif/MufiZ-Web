@@ -157,28 +157,64 @@ $ sudo mv mufiz /usr/local/bin</code></pre>
                 </ol>
             </div>
 
-            <div class="w3-card box w3-mobile w3-text-white">
+            <div class="w3-card box">
                 <h2>Package Manager Installation</h2>
 
-                <h3>APT</h3>
-                <p>We host our official APT repository on Github and can be
-                    found at <a
-                        href="https://github.com/mustafif/MufiZ-APT">https://github.com/mustafif/MufiZ-APT</a></p>
-                <p>Run the following commands to add the repository and install
-                    Mufi-Lang:</p>
-                <pre
-                    class="language-bash"><code>$ echo "deb [arch= {arch}, trusted=yes] https://mustafif.github.io/Mufi-APT mufiz main" | sudo tee /etc/apt/sources.list.d/mufiz.list
+                <div class="w3-text-white">
+                    <button class="w3-button w3-block w3-round" style="background-color: #f0ad4e; width: 75%; color: black;margin-right: auto; margin-left: auto;"
+                        onclick="toggleAccordionPM('apt')"><h6><strong>APT</strong></h6></button>
+                    <div id="apt" class="w3-hide w3-container">
+                        <p>We host our official APT repository on Github and can
+                            be found at <a
+                                href="https://github.com/mustafif/MufiZ-APT">https://github.com/mustafif/MufiZ-APT</a></p>
+                        <p>Run the following commands to add the repository and
+                            install Mufi-Lang:</p>
+                        <pre
+                            class="language-bash"><code>$ echo "deb [arch={arch}, trusted=yes] https://mustafif.github.io/Mufi-APT mufiz main" | sudo tee /etc/apt/sources.list.d/mufiz.list
 $ sudo apt update && sudo apt upgrade
 $ sudo apt install mufiz</code></pre>
+                        <p>Where <code>{arch}</code> is the architecture of your
+                            system.</p>
+                        <div class="w3-centered">
+                            <table class="w3-table w3-border"
+                                style="width: 50%; margin-right: auto; margin-left: auto;">
+                                <thead>
+                                    <tr>
+                                        <th><strong>Supported
+                                                Architectures</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><code>amd64</code></td></tr>
+                                    <tr><td><code>i386</code></td></tr>
+                                    <tr><td><code>arm64</code></td></tr>
+                                    <tr><td><code>mipsel</code></td></tr>
+                                    <tr><td><code>mips64el</code></td></tr>
+                                    <tr><td><code>mips64</code></td></tr>
+                                    <tr><td><code>mips</code></td></tr>
+                                    <tr><td><code>powerpc</code></td></tr>
+                                    <tr><td><code>powerpc64</code></td></tr>
+                                    <tr><td><code>powerpc64le</code></td></tr>
+                                    <tr><td><code>riscv64</code></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
-                <h3>Scoop</h3>
-                <p>We host our own Scoop Bucket at <a
-                        href="https://github.com/Mustafif/mufi-bucket">https://github.com/Mustafif/mufi-bucket</a></p>
-                <p>Run the following commands to add the bucket and install
-                    Mufi-Lang:</p>
-                <pre
-                    class="language-powershell"><code>$ scoop bucket add mufi-bucket https://github.com/mustafif/mufi-bucket
+                    <br />
+
+                    <button class="w3-button w3-block w3-round" style="background-color: #f0ad4e; width: 75%; color: black;margin-right: auto; margin-left: auto;"
+                        onclick="toggleAccordionPM('scoop')"><h6><strong>SCOOP</strong></h6></button>
+                    <div id="scoop" class="w3-hide w3-container">
+                        <p>We host our own Scoop Bucket at <a
+                                href="https://github.com/Mustafif/mufi-bucket">https://github.com/Mustafif/mufi-bucket</a></p>
+                        <p>Run the following commands to add the bucket and
+                            install Mufi-Lang:</p>
+                        <pre
+                            class="language-powershell"><code>$ scoop bucket add mufi-bucket https://github.com/mustafif/mufi-bucket
 $ scoop install mufi-bucket/MufiZ</code></pre>
+                    </div>
+                </div>
             </div>
 
             <div class="w3-card box releases w3-mobile">
@@ -226,6 +262,14 @@ $ scoop install mufi-bucket/MufiZ</code></pre>
                         button.classList.add("active");
                     }
                 }
+                function toggleAccordionPM(id) {
+                    var x = document.getElementById(id);
+                    if (x.className.indexOf("w3-show") == -1) {
+                      x.className += " w3-show";
+                    } else {
+                      x.className = x.className.replace(" w3-show", "");
+                    }
+                  }
         </script>
             {% include "footer" %}
         </body>
