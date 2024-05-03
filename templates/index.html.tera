@@ -86,7 +86,8 @@
             <div class="w3-card w3-mobile">
                 <button onclick="toggleAccordion('packageAccordion')"
                     class="accordion-button w3-large"
-                    id="accordionButton" style="background-color: #f0ad4e;">Packages</button>
+                    id="accordionButton"
+                    style="background-color: #f0ad4e;">Packages</button>
                 <div id="packageAccordion" class="accordion-content">
                     <table class="package-table">
                         <thead>
@@ -125,18 +126,21 @@
 
             <div class="w3-card box w3-mobile w3-text-white">
                 <h2>Manual Installation</h2>
+                <div class="w3-panel w3-red">
+                    <p><strong>As of Version 0.6.0 Changes to Release System</strong></p>
+                </div>
 
                 <h3>Debian Package</h3>
                 <p>Download the latest DEB package and use the following
                     commands: </p>
                 <pre
-                    class="language-bash"><code>$ sudo dpkg -i mufiz_{version}_{target}.deb</code></pre>
+                    class="language-bash"><code>$ sudo dpkg -i mufiz_{version}_{arch}.deb</code></pre>
 
                 <h3>RPM Package</h3>
                 <p>Download the latest RPM package and use the following
                     commands: </p>
                 <pre
-                    class="language-bash"><code>$ sudo rpm -i mufiz_{version}_{target}.rpm</code></pre>
+                    class="language-bash"><code>$ sudo rpm -i mufiz_{version}-1.{arch}.rpm</code></pre>
 
                 <h3>Linux/MacOS Zip</h3>
                 <p>Download the latest zip package and use the following
@@ -161,7 +165,8 @@ $ sudo mv mufiz /usr/local/bin</code></pre>
                 <h2>Package Manager Installation</h2>
 
                 <div class="w3-text-white">
-                    <button class="w3-button w3-block w3-round" style="background-color: #f0ad4e; width: 75%; color: black;margin-right: auto; margin-left: auto;"
+                    <button class="w3-button w3-block w3-round"
+                        style="background-color: #f0ad4e; width: 75%; color: black;margin-right: auto; margin-left: auto;"
                         onclick="toggleAccordionPM('apt')"><h6><strong>APT</strong></h6></button>
                     <div id="apt" class="w3-hide w3-container">
                         <p>We host our official APT repository on Github and can
@@ -203,7 +208,8 @@ $ sudo apt install mufiz</code></pre>
 
                     <br />
 
-                    <button class="w3-button w3-block w3-round" style="background-color: #f0ad4e; width: 75%; color: black;margin-right: auto; margin-left: auto;"
+                    <button class="w3-button w3-block w3-round"
+                        style="background-color: #f0ad4e; width: 75%; color: black;margin-right: auto; margin-left: auto;"
                         onclick="toggleAccordionPM('scoop')"><h6><strong>SCOOP</strong></h6></button>
                     <div id="scoop" class="w3-hide w3-container">
                         <p>We host our own Scoop Bucket at <a
@@ -213,6 +219,25 @@ $ sudo apt install mufiz</code></pre>
                         <pre
                             class="language-powershell"><code>$ scoop bucket add mufi-bucket https://github.com/mustafif/mufi-bucket
 $ scoop install mufi-bucket/MufiZ</code></pre>
+                    </div>
+
+                    <br />
+
+                    <button class="w3-button w3-block w3-round"
+                        style="background-color: #f0ad4e; width: 75%; color: black;margin-right: auto; margin-left: auto;"
+                        onclick="toggleAccordionPM('brew')"><h6><strong>BREW</strong></h6></button>
+                    <div id="brew" class="w3-hide w3-container">
+                        <p>We host our own Homebrew Tap at <a
+                                href="https://github.com/Mustafif/homebrew-mufi">https://github.com/Mustafif/homebrew-mufi</a></p>
+                        <p>Run the following commands to add the tap and
+                            install Mufi-Lang:</p>
+                        <pre
+                            class="language-shell"><code>$ brew tap mustafif/mufi
+$ brew install MufiZ</code></pre>
+                        We support the following targets:
+                        <strong>x86_64-linux</strong>, <strong>aarch64-macos</strong>
+                        (M-Series Macs) and <strong>x86_64-macos</strong> (Intel
+                        Macs).
                     </div>
                 </div>
             </div>

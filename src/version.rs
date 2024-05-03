@@ -8,7 +8,8 @@ lazy_static! {
         Version::new("v0.3.0", "Iris", Status::Released),
         Version::new("v0.4.0", "Voxl", Status::Released),
         Version::new("v0.5.0", "Luna", Status::Released),
-        Version::new("v0.6.0", "Mars", Status::Latest)
+        Version::new("v0.6.0", "Mars", Status::Latest), 
+        Version::new("v0.7.0", "Jade", Status::InProgress),
     ];
 }
 #[derive(Debug, Clone, Deserialize, Serialize)]
