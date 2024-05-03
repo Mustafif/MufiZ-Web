@@ -1,12 +1,32 @@
 <div class="title w3-mobile">
-    <h1>MufiZ {{title}} </h1>
+    <h1 class="w3-xxxlarge">
+        Mufi<span style="color: #f0ad4e;">Z</span> {{title}}
+    </h1>
 </div>
 <div class="subtitle w3-mobile">
     <p>{{subtitle}}</p>
-    <p><a href="https://github.com/Mustafif/MufiZ" class="w3-mobile">
-            <i
-                class="devicon-github-original-wordmark language-icon w3-text-grey"></i>
-        </a></p>
+    <div class="w3-center">
+        <p>
+            <a href="https://github.com/Mustafif/MufiZ" class="w3-mobile">
+                <i
+                    class="devicon-github-original-wordmark language-icon w3-text-grey w3-margin"></i>
+            </a>
+            <a href="https://github.com/Mustafif/homebrew-mufi"
+                class="w3-mobile">
+                <i
+                    class="devicon-homebrew-plain-wordmark language-icon w3-text-grey w3-margin"></i>
+            </a>
+            <a href="https://github.com/mustafif/mufi-bucket" class="w3-mobile">
+                <i
+                    class="devicon-windows11-original language-icon w3-text-grey w3-margin"></i>
+            </a>
+            <a href="https://github.com/Mustafif/MufiZ-APT" class="w3-mobile">
+                <i
+                    class="devicon-debian-plain language-icon w3-text-grey w3-margin"></i>
+            </a>
+        </p>
+    </div>
+
 </div>
 
 <nav class="w3-mobile">
