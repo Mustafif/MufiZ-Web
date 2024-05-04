@@ -21,6 +21,7 @@
                     the language and enhancing its applicability to diverse
                     computational domains.
                 </p>
+                <iframe src="https://github.com/sponsors/Mustafif/button" title="Sponsor Mustafif" height="30" width="114" style="border: 0; border-radius: 6px;"></iframe>
             </div>
 
             <div class="w3-card box w3-mobile">
@@ -127,7 +128,8 @@
             <div class="w3-card box w3-mobile w3-text-white">
                 <h2>Manual Installation</h2>
                 <div class="w3-panel w3-red">
-                    <p><strong>As of Version 0.6.0 Changes to Release System</strong></p>
+                    <p><strong>As of Version 0.6.0 Changes to Release
+                            System</strong></p>
                 </div>
 
                 <h3>Debian Package</h3>
@@ -140,7 +142,7 @@
                 <p>Download the latest RPM package and use the following
                     commands: </p>
                 <pre
-                    class="language-bash"><code>$ sudo rpm -i mufiz_{version}-1.{arch}.rpm</code></pre>
+                    class="language-bash"><code>$ sudo rpm -i mufiz-{version}-1.{arch}.rpm</code></pre>
 
                 <h3>Linux/MacOS Zip</h3>
                 <p>Download the latest zip package and use the following
@@ -235,7 +237,8 @@ $ scoop install mufi-bucket/MufiZ</code></pre>
                             class="language-shell"><code>$ brew tap mustafif/mufi
 $ brew install MufiZ</code></pre>
                         We support the following targets:
-                        <strong>x86_64-linux</strong>, <strong>aarch64-macos</strong>
+                        <strong>x86_64-linux</strong>,
+                        <strong>aarch64-macos</strong>
                         (M-Series Macs) and <strong>x86_64-macos</strong> (Intel
                         Macs).
                     </div>
