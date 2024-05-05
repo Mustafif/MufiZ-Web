@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% set title = "Download" %}
+    {% set subtitle = "Download the Different Releases" %}
+    {% include "head" %}
+    {% include "nav" %}
+
+    <body>
+        <div class="w3-container container w3-mobile">
+            <div class="w3-container box w3-mobile">
+                <div class="w3-center w3-text-white">  
+                    <h1>In Construction</h1>                  
+                </div>
+            </div>
+            <br>
+            {% include "footer" %}
+        </body>
+    </html>

@@ -60,7 +60,7 @@
 
             <div class="w3-card box targets w3-mobile">
                 <h2>Supported Targets</h2>
-                <input type="radio" id="windows" name="target">
+            <input type="radio" id="windows" name="target">
                 <label class="w3-margin" for="windows">Windows</label>
                 <input type="radio" id="linux" name="target">
                 <label class="w3-margin" for="linux">Linux</label>

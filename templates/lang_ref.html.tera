@@ -4,202 +4,202 @@
     {% set subtitle = "Explore through the depths of Mufiness" %}
     {% include "head" %}
     {% include "nav" %}
-
-    <div class="w3-container container w3-mobile">
-        <div class="w3-container box w3-mobile">
-            <div class="w3-center">
-                <h2>Data Types</h2>
-                <table class="package-table w3-mobile">
-                    <tr>
-                        <th>Name</th>
-                        <th>Size</th>
-                        <th>Type</th>
-                    </tr>
-                    <tr>
-                        <td><code>int</code></td>
-                        <td>2/4 bytes</td>
-                        <td>Primitive</td>
-                    </tr>
-                    <tr>
-                        <td><code>double</code></td>
-                        <td>8 bytes</td>
-                        <td>Primitive</td>
-                    </tr>
-                    <tr>
-                        <td><code>bool</code></td>
-                        <td>1 byte</td>
-                        <td>Primitive</td>
-                    </tr>
-                    <tr>
-                        <td><code>complex</code></td>
-                        <td>16 bytes</td>
-                        <td>Primitive</td>
-                    </tr>
-                    <tr>
-                        <td><code>string</code></td>
-                        <td>variable</td>
-                        <td>Object</td>
-                    </tr>
-                    <tr>
-                        <td><code>array</code></td>
-                        <td>variable</td>
-                        <td>Object</td>
-                    </tr>
-                    <tr>
-                        <td><code>linked list</code></td>
-                        <td>variable</td>
-                        <td>Object</td>
-                    </tr>
-                    <tr>
-                        <td><code>hash table</code></td>
-                        <td>variable</td>
-                        <td>Object</td>
-                    </tr>
+    <body>
+        <div class="w3-container container w3-mobile">
+            <div class="w3-container box w3-mobile">
+                <div class="w3-center">
+                    <h2>Data Types</h2>
+                    <table class="package-table w3-mobile">
+                        <tr>
+                            <th>Name</th>
+                            <th>Size</th>
+                            <th>Type</th>
+                        </tr>
+                        <tr>
+                            <td><code>int</code></td>
+                            <td>2/4 bytes</td>
+                            <td>Primitive</td>
+                        </tr>
+                        <tr>
+                            <td><code>double</code></td>
+                            <td>8 bytes</td>
+                            <td>Primitive</td>
+                        </tr>
+                        <tr>
+                            <td><code>bool</code></td>
+                            <td>1 byte</td>
+                            <td>Primitive</td>
+                        </tr>
+                        <tr>
+                            <td><code>complex</code></td>
+                            <td>16 bytes</td>
+                            <td>Primitive</td>
+                        </tr>
+                        <tr>
+                            <td><code>string</code></td>
+                            <td>variable</td>
+                            <td>Object</td>
+                        </tr>
+                        <tr>
+                            <td><code>array</code></td>
+                            <td>variable</td>
+                            <td>Object</td>
+                        </tr>
+                        <tr>
+                            <td><code>linked list</code></td>
+                            <td>variable</td>
+                            <td>Object</td>
+                        </tr>
+                        <tr>
+                            <td><code>hash table</code></td>
+                            <td>variable</td>
+                            <td>Object</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <div class="w3-container box">
+                <div class="w3-center">
+                    <h2>Operators</h2>
+                    <table class="package-table w3-mobile">
+                        <tr>
+                            <th>Operator</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td><code>+</code></td>
+                            <td>Addition</td>
+                        </tr>
+                        <tr>
+                            <td><code>-</code></td>
+                            <td>Subtraction</td>
+                        </tr>
+                        <tr>
+                            <td><code>*</code></td>
+                            <td>Multiplication</td>
+                        </tr>
+                        <tr>
+                            <td><code>/</code></td>
+                            <td>Division</td>
+                        </tr>
+                        <tr>
+                            <td><code>%</code></td>
+                            <td>Modulus</td>
+                        </tr>
+                        <tr>
+                            <td><code>==</code></td>
+                            <td>Equality</td>
+                        </tr>
+                        <tr>
+                            <td><code>!=</code></td>
+                            <td>Inequality</td>
+                        </tr>
+                        <tr>
+                            <td><code>&gt;</code></td>
+                            <td>Greater than</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;</code></td>
+                            <td>Less than</td>
+                        </tr>
+                        <tr>
+                            <td><code>&gt;=</code></td>
+                            <td>Greater than or equal to</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;=</code></td>
+                            <td>Less than or equal to</td>
+                        </tr>
+                        <tr>
+                            <td><code>!</code></td>
+                            <td>Logical NOT</td>
+                        </tr>
+                        <tr>
+                            <td><code>and</code></td>
+                            <td>Logical AND</td>
+                        </tr>
+                        <tr>
+                            <td><code>or</code></td>
+                            <td>Logical OR</td>
+                        </tr>
+                        <tr>
+                            <td><code>+=</code></td>
+                            <td>Additonal Assignment</td>
+                        </tr>
+                        <tr>
+                            <td><code>-=</code></td>
+                            <td>Subtraction Assignment</td>
+                        </tr>
+                        <tr>
+                            <td><code>*=</code></td>
+                            <td>Multiplication Assignment</td>
+                        </tr>
+                        <tr>
+                            <td><code>/=</code></td>
+                            <td>Division Assignment</td>
+                        </tr>
+                        <tr>
+                            <td><code>++</code></td>
+                            <td>Increment</td>
+                        </tr>
+                        <tr>
+                            <td><code>--</code></td>
+                            <td>Decrement</td>
+                        </tr>
+                    </table>
                 </table>
             </div>
         </div>
         <br>
-        <div class="w3-container box">
-            <div class="w3-center">
-                <h2>Operators</h2>
-                <table class="package-table w3-mobile">
-                    <tr>
-                        <th>Operator</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <td><code>+</code></td>
-                        <td>Addition</td>
-                    </tr>
-                    <tr>
-                        <td><code>-</code></td>
-                        <td>Subtraction</td>
-                    </tr>
-                    <tr>
-                        <td><code>*</code></td>
-                        <td>Multiplication</td>
-                    </tr>
-                    <tr>
-                        <td><code>/</code></td>
-                        <td>Division</td>
-                    </tr>
-                    <tr>
-                        <td><code>%</code></td>
-                        <td>Modulus</td>
-                    </tr>
-                    <tr>
-                        <td><code>==</code></td>
-                        <td>Equality</td>
-                    </tr>
-                    <tr>
-                        <td><code>!=</code></td>
-                        <td>Inequality</td>
-                    </tr>
-                    <tr>
-                        <td><code>&gt;</code></td>
-                        <td>Greater than</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;</code></td>
-                        <td>Less than</td>
-                    </tr>
-                    <tr>
-                        <td><code>&gt;=</code></td>
-                        <td>Greater than or equal to</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;=</code></td>
-                        <td>Less than or equal to</td>
-                    </tr>
-                    <tr>
-                        <td><code>!</code></td>
-                        <td>Logical NOT</td>
-                    </tr>
-                    <tr>
-                        <td><code>and</code></td>
-                        <td>Logical AND</td>
-                    </tr>
-                    <tr>
-                        <td><code>or</code></td>
-                        <td>Logical OR</td>
-                    </tr>
-                    <tr>
-                        <td><code>+=</code></td>
-                        <td>Additonal Assignment</td>
-                    </tr>
-                    <tr>
-                        <td><code>-=</code></td>
-                        <td>Subtraction Assignment</td>
-                    </tr>
-                    <tr>
-                        <td><code>*=</code></td>
-                        <td>Multiplication Assignment</td>
-                    </tr>
-                    <tr>
-                        <td><code>/=</code></td>
-                        <td>Division Assignment</td>
-                    </tr>
-                    <tr>
-                        <td><code>++</code></td>
-                        <td>Increment</td>
-                    </tr>
-                    <tr>
-                        <td><code>--</code></td>
-                        <td>Decrement</td>
-                    </tr>
-                </table>
-            </table>
-        </div>
-    </div>
-    <br>
-    <div class="w3-container box w3-text-white">
-        <h2>Variables</h2>
-        <p>Variables are used to store data. They are declared using the
-            <code>var</code> keyword.</p> You may choose to initialize
-        with
-        a value or not. If not, the variable will be initialized with
-        <code>nil</code>.
-        <pre>
+        <div class="w3-container box w3-text-white">
+            <h2>Variables</h2>
+            <p>Variables are used to store data. They are declared using the
+                <code>var</code> keyword.</p> You may choose to initialize
+            with
+            a value or not. If not, the variable will be initialized with
+            <code>nil</code>.
+            <pre>
 <code class="language-clike">var a = 10;
 var b; // or var b = nil;</code></pre>
 
-        <h3>Global and Local Scopes</h3>
-        <p>Variables can be declared in the global scope or local scope.
-            Global variables are declared outside of any function and
-            can be
-            accessed from anywhere in the program. Local variables are
-            declared inside a function and can only be accessed within
-            that
-            function.</p>
-        <pre>
+            <h3>Global and Local Scopes</h3>
+            <p>Variables can be declared in the global scope or local scope.
+                Global variables are declared outside of any function and
+                can be
+                accessed from anywhere in the program. Local variables are
+                declared inside a function and can only be accessed within
+                that
+                function.</p>
+            <pre>
 <code class="language-clike">var a = 10; // Global
 fun foo() {
     var b = 20; // Local
 }
 print b; // Undefined variable 'b'.</code></pre>
+            <br>
+        </div>
         <br>
-    </div>
-    <br>
-    <div class="w3-container box w3-mobile w3-text-white">
-        <h2>Control Structures</h2>
-        <h3>If-else</h3>
-        <p>The <code>if</code> statement is used to execute a block of
-            code
-            if a condition is true. If the condition is false, the code
-            block will not be executed. The <code>else</code> statement
-            is
-            used to execute a block of code if the condition is
-            false.</p>
-        <pre>
+        <div class="w3-container box w3-mobile w3-text-white">
+            <h2>Control Structures</h2>
+            <h3>If-else</h3>
+            <p>The <code>if</code> statement is used to execute a block of
+                code
+                if a condition is true. If the condition is false, the code
+                block will not be executed. The <code>else</code> statement
+                is
+                used to execute a block of code if the condition is
+                false.</p>
+            <pre>
 <code class="language-clike">if (condition) {
     // code block
 } else {
     // code block
 }</code></pre>
 
-        To check for multiple conditions, the <code>else if</code>
-        statement can be used.
-        <pre>
+            To check for multiple conditions, the <code>else if</code>
+            statement can be used.
+            <pre>
 <code class="language-clike">if (condition1) {
     // code block
 } else if (condition2) {
@@ -207,61 +207,61 @@ print b; // Undefined variable 'b'.</code></pre>
 } else {
     // code block
 }</code></pre>
-        <h3>Loops</h3>
-        <p>Loops are used to execute a block of code multiple times. The
-            <code>for</code> loop is used to execute a block of code a
-            specific number of times. The <code>while</code> loop is
-            used to
-            execute a block of code as long as a condition is true.</p>
-        <pre><code class="language-clike">while(condition) {
+            <h3>Loops</h3>
+            <p>Loops are used to execute a block of code multiple times. The
+                <code>for</code> loop is used to execute a block of code a
+                specific number of times. The <code>while</code> loop is
+                used to
+                execute a block of code as long as a condition is true.</p>
+            <pre><code class="language-clike">while(condition) {
     // code block
 }
 </code></pre>
-        The <code>for</code> loop is used to execute a block of code a
-        specific number of iterations. It has three parts: initialization,
-        condition, and increment/decrement.
-        <pre><code class="language-clike">for(var i = 0; i < 10; i++) {
+            The <code>for</code> loop is used to execute a block of code a
+            specific number of iterations. It has three parts: initialization,
+            condition, and increment/decrement.
+            <pre><code class="language-clike">for(var i = 0; i < 10; i++) {
     // code block
 }</code></pre>
-    </div>
-    <br>
-    <div class="w3-container box w3-mobile w3-text-white">
-        <h2>Functions</h2>
-        <p>Functions are used to group a block of code that can be
-            executed
-            multiple times. They are declared using the <code>fun</code>
-            keyword.</p>
-        <pre>
+        </div>
+        <br>
+        <div class="w3-container box w3-mobile w3-text-white">
+            <h2>Functions</h2>
+            <p>Functions are used to group a block of code that can be
+                executed
+                multiple times. They are declared using the <code>fun</code>
+                keyword.</p>
+            <pre>
 <code class="language-clike">fun foo() {
     // code block
 }</code></pre>
-        <h3>Function Arguments</h3>
-        <p>Functions can take arguments. These are the values that are
-            passed to the function when it is called.</p>
-        <pre>
+            <h3>Function Arguments</h3>
+            <p>Functions can take arguments. These are the values that are
+                passed to the function when it is called.</p>
+            <pre>
 <code class="language-clike">fun foo(a, b) {
     // code block
 }</code></pre>
-        <h3>Function Return</h3>
-        <p>Functions can return a value. This is the value that the
-            function will return when it is called.</p>
-        <pre>
+            <h3>Function Return</h3>
+            <p>Functions can return a value. This is the value that the
+                function will return when it is called.</p>
+            <pre>
 <code class="language-clike">fun foo() {
     return 10;
 }</code></pre>
-    </div>
-    <br>
-    <div class="w3-container box w3-mobile w3-text-white">
-        <h2>Object-Oriented Programming</h2>
-        <h3>Classes</h3>
-        <p>Classes are used to create objects. They are declared using
-            the
-            <code>class</code> keyword.</p> To initialize the fields in the
-        class
-        use the <code>init</code> method. Each field is accessed under the
-        <code>self</code> keyword.
+        </div>
+        <br>
+        <div class="w3-container box w3-mobile w3-text-white">
+            <h2>Object-Oriented Programming</h2>
+            <h3>Classes</h3>
+            <p>Classes are used to create objects. They are declared using
+                the
+                <code>class</code> keyword.</p> To initialize the fields in the
+            class
+            use the <code>init</code> method. Each field is accessed under the
+            <code>self</code> keyword.
 
-        <pre>
+            <pre>
 <code class="language-clike">class Person {
     init(name, age){
         self.name = name; 
@@ -269,19 +269,20 @@ print b; // Undefined variable 'b'.</code></pre>
     }
 }
 </code></pre>
-        <h3>Objects</h3>
-        <p>Objects are instances of classes. They are created by calling
-            the
-            class name as a function with whichever arguments it requires.</p>
-        <pre>
+            <h3>Objects</h3>
+            <p>Objects are instances of classes. They are created by calling
+                the
+                class name as a function with whichever arguments it
+                requires.</p>
+            <pre>
 <code class="language-clike">var person = Person("John", 25);
 </code></pre>
-        <h3>Inheritance</h3>
-        <p>Inheritance is used to create a new class that is based on an
-            existing class. The new class inherits the fields and methods
-            of the existing class.</p>
-        To inherit from a class, use the <code><</code> operator.
-        <pre>
+            <h3>Inheritance</h3>
+            <p>Inheritance is used to create a new class that is based on an
+                existing class. The new class inherits the fields and methods
+                of the existing class.</p>
+            To inherit from a class, use the <code><</code> operator.
+            <pre>
 <code class="language-clike">class Student < Person {
     init(name, age, grade){
         self.name = name; 
@@ -290,62 +291,71 @@ print b; // Undefined variable 'b'.</code></pre>
     }
 }
 </code></pre>
-    </div>
-    <br>
-    <div class="w3-container box w3-mobile w3-text-white">
-        <h2>Collections</h2>
-        <div class="w3-panel w3-red">
-            <p><strong>Note: The new Array and Float Vector semantics (<code>[
-                        ]</code> and <code>{ }</code> respectively) are
-                    currently experimental features added in the Jade
-                    Release.</strong></p>
         </div>
-        {# Will not mention Matrices until further work is done from MatrixAlgo
-        #}
-        <h3>Arrays</h3>
-        <p>Arrays are used to store multiple values in a
-            single variable. They can either be initialized by the
-            <code>array</code> function (which can be used to create a dynamic
-            or static array) or
-            you can create a static array with <code>[ ]</code>.</p>
-        <pre>
+        <br>
+        <div class="w3-container box w3-mobile w3-text-white">
+            <h2>Collections</h2>
+            <div class="w3-panel w3-red">
+                <p><strong>Note: The new Array and Float Vector semantics
+                        (<code>[
+                            ]</code> and <code>{ }</code> respectively) are
+                        currently experimental features added in the Jade
+                        Release.</strong></p>
+            </div>
+            {# Will not mention Matrices until further work is done from
+            MatrixAlgo
+            #}
+            <h3>Arrays</h3>
+            <p>Arrays are used to store multiple values in a
+                single variable. They can either be initialized by the
+                <code>array</code> function (which can be used to create a
+                dynamic
+                or static array) or
+                you can create a static array with <code>[ ]</code>.</p>
+            <pre>
 
 <code class="language-clike">var arr1 = array(10); // Dynamic array with initial capacity of 10
 var arr2 = [1, 2, 3, 4, 5]; // Static array with 5 elements
 </code></pre>
-        <h3>Linked Lists</h3>
-        <p>Linked lists are a Doubly Linked List that can used to store multiple
-            values in a
-            single variable by doing operations from both the back and front.
-            They can either be initialized by the
-            <code>linked_list</code> function.</p>
-        <pre>
+            <h3>Linked Lists</h3>
+            <p>Linked lists are a Doubly Linked List that can used to store
+                multiple
+                values in a
+                single variable by doing operations from both the back and
+                front.
+                They can either be initialized by the
+                <code>linked_list</code> function.</p>
+            <pre>
 <code class="language-clike">var list = linked_list();
 </code></pre>
-        <h3>Hash Tables</h3>
-        <p>Hash tables are used to store key-value pairs in a
-            single variable. They can either be initialized by the
-            <code>hash_table</code> function. Where the key is always a
-            <code>string</code> and the value is any type.</p>
-        <pre>
+            <h3>Hash Tables</h3>
+            <p>Hash tables are used to store key-value pairs in a
+                single variable. They can either be initialized by the
+                <code>hash_table</code> function. Where the key is always a
+                <code>string</code> and the value is any type.</p>
+            <pre>
 <code class="language-clike">var table = hash_table();
 </code></pre>
-        <h3> Float Vectors </h3>
-        <p>Float Vectors are a special kind of static arrays, which only store
-            explicitly <code>double</code> values, and are able to make use of
-            AVX2 instructions to do operations in parallel. When a float vector
-            has a size of
-            <code>3</code>, it is also treated as a 3D Vector. To create a
-            Floating Vector, you can either
-            use the <code>fvec</code> function or you can set values directly
-            with <code>{ }</code>.</p>
+            <h3> Float Vectors </h3>
+            <p>Float Vectors are a special kind of static arrays, which only
+                store
+                explicitly <code>double</code> values, and are able to make use
+                of
+                AVX2 instructions to do operations in parallel. When a float
+                vector
+                has a size of
+                <code>3</code>, it is also treated as a 3D Vector. To create a
+                Floating Vector, you can either
+                use the <code>fvec</code> function or you can set values
+                directly
+                with <code>{ }</code>.</p>
 
-        <pre>
+            <pre>
 <code class="language-clike">var vec1 = fvec(3); // Float Vector with 3 elements
 var vec2 = {1.0, 2.0, 3.0}; // Float Vector with 3 elements
 </code></pre>
-    </div>
-    <br>
-    {% include "footer" %}
-</body>
+        </div>
+        <br>
+        {% include "footer" %}
+    </body>
 </html>

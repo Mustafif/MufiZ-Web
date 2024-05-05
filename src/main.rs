@@ -1,6 +1,6 @@
+pub mod stdlib;
 pub mod targets;
 pub mod version;
-pub mod stdlib;
 
 use rocket::fs::FileServer;
 use rocket::{get, launch, routes, Build, Rocket};
@@ -28,6 +28,11 @@ async fn index() -> Template {
     )
 }
 
+#[get("/download")]
+async fn download() -> Template {
+    Template::render("download", context! {})
+}
+
 #[get("/lang_ref")]
 async fn lang_ref() -> Template {
     Template::render("lang_ref", context! {})
@@ -41,20 +46,23 @@ async fn std_() -> Template {
     let conversion = stdlib::Functions::conversion().await.unwrap();
     let collections = stdlib::Functions::collections().await.unwrap();
     let net = stdlib::Functions::net().await.unwrap();
-    Template::render("std", context! {
-        time: time.functions,
-        math: math.functions,
-        fs: fs.functions,
-        conversion: conversion.functions,
-        collections: collections.functions,
-        net: net.functions
-    })
+    Template::render(
+        "std",
+        context! {
+            time: time.functions,
+            math: math.functions,
+            fs: fs.functions,
+            conversion: conversion.functions,
+            collections: collections.functions,
+            net: net.functions
+        },
+    )
 }
 
 #[launch]
 async fn rocket() -> Rocket<Build> {
     rocket::build()
         .attach(Template::fairing())
-        .mount("/", routes![index, lang_ref, std_])
+        .mount("/", routes![index, lang_ref, std_, download])
         .mount("/assets", FileServer::from("assets"))
 }
