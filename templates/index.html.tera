@@ -84,7 +84,7 @@
                 </div>
             </div>
 
-            <div class="w3-card w3-mobile">
+            {# <div class="w3-card w3-mobile">
                 <button onclick="toggleAccordion('packageAccordion')"
                     class="accordion-button w3-large"
                     id="accordionButton"
@@ -243,7 +243,7 @@ $ brew install MufiZ</code></pre>
                         Macs).
                     </div>
                 </div>
-            </div>
+            </div> #}
 
             <div class="w3-card box releases w3-mobile">
                 <h2>Releases</h2>

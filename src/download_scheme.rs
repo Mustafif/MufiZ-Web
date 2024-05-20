@@ -3,6 +3,7 @@ use rocket::serde::{Deserialize, Serialize};
 use crate::targets::{OS, Package, Packages, Targets};
 use crate::version::{Version, VERSIONS};
 pub type DownloadScheme = HashMap<String, [OSPackage; 3]>;
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct OSPackage{
     os: OS,
@@ -44,7 +45,10 @@ pub async fn os_packages_vers(version: Version) -> (Version, [OSPackage; 3]){
 pub async fn download_scheme() -> DownloadScheme{
     let mut threads = Vec::new();
     let mut ds = DownloadScheme::new();
-    for v in VERSIONS.iter().rev(){
+    for v in VERSIONS.iter(){
+        if v.status == crate::version::Status::Archived{
+            continue;
+        }
         let t = tokio::spawn(
             os_packages_vers(v.clone())
         );
@@ -52,7 +56,7 @@ pub async fn download_scheme() -> DownloadScheme{
     }
 
     let res = futures::future::join_all(threads).await;
-    for r in res.into_iter().rev(){
+    for r in res{
         let r = r.unwrap();
         ds.insert(r.0.vers_with_name(), r.1);
     }

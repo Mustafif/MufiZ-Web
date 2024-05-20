@@ -7,7 +7,7 @@ use rocket::fs::FileServer;
 use rocket::{get, launch, routes, Build, Rocket};
 use rocket_dyn_templates::{context, Template};
 use targets::packages;
-use version::VERSIONS;
+use version::{Status, VERSIONS};
 use crate::download_scheme::download_scheme;
 
 #[get("/")]
@@ -33,7 +33,7 @@ async fn index() -> Template {
 #[get("/download")]
 async fn download() -> Template {
     let down_scheme = download_scheme().await;
-    let versions = VERSIONS.iter().map(|v| v.vers_with_name()).collect::<Vec<String>>();
+    let versions = VERSIONS.iter().filter(|v| v.status != Status::Archived).map(|v| v.vers_with_name()).collect::<Vec<String>>();
     Template::render("download", context! {
         down_scheme: down_scheme,
         versions: versions

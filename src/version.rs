@@ -4,10 +4,10 @@ use serde::{Deserialize, Serialize};
 lazy_static! {
     pub static ref VERSIONS: Vec<Version> = vec![
         Version::new("v0.1.0", "Baloo", Status::Archived),
-        Version::new("v0.2.0", "Zula", Status::Released),
-        Version::new("v0.3.0", "Iris", Status::Released),
-        Version::new("v0.4.0", "Voxl", Status::Released),
-        Version::new("v0.5.0", "Luna", Status::Released),
+        Version::new("v0.2.0", "Zula", Status::Archived),
+        Version::new("v0.3.0", "Iris", Status::Archived),
+        Version::new("v0.4.0", "Voxl", Status::Archived),
+        Version::new("v0.5.0", "Luna", Status::Archived),
         Version::new("v0.6.0", "Mars", Status::Latest),
         Version::new("v0.7.0", "Jade", Status::InProgress),
     ];
