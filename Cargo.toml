@@ -1,6 +1,6 @@
 [package]
 name = "mufiz-web"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 
 [dependencies]
@@ -12,6 +12,7 @@ rocket_dyn_templates = { version = "0.1.0", features = ["tera"] }
 serde = { version = "1.0.196", features = ["derive"] }
 tokio = { version = "1.36.0", features = ["full"] }
 toml = "0.8.10"
+futures = "0.3.30"
 
 [profile.release]
 strip = true  # Automatically strip symbols from the binary.

@@ -1,3 +1,4 @@
+mod download_scheme;
 pub mod stdlib;
 pub mod targets;
 pub mod version;
@@ -7,6 +8,7 @@ use rocket::{get, launch, routes, Build, Rocket};
 use rocket_dyn_templates::{context, Template};
 use targets::packages;
 use version::VERSIONS;
+use crate::download_scheme::download_scheme;
 
 #[get("/")]
 async fn index() -> Template {
@@ -30,7 +32,12 @@ async fn index() -> Template {
 
 #[get("/download")]
 async fn download() -> Template {
-    Template::render("download", context! {})
+    let down_scheme = download_scheme().await;
+    let versions = VERSIONS.iter().map(|v| v.vers_with_name()).collect::<Vec<String>>();
+    Template::render("download", context! {
+        down_scheme: down_scheme,
+        versions: versions
+    })
 }
 
 #[get("/lang_ref")]

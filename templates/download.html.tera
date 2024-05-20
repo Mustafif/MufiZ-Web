@@ -8,10 +8,26 @@
     <body>
         <div class="w3-container container w3-mobile">
             <div class="w3-container box w3-mobile">
-                <div class="w3-center w3-text-white">  
-                    <h1>In Construction</h1>                  
+                <div class="w3-center w3-text-white">
+                    <h1>In Construction</h1>
                 </div>
             </div>
+
+            {% for v in versions | reverse %}
+            <h1>{{ v }}</h1>
+            {% for value in down_scheme[v] %}
+            <p>{{ value.os }}</p>
+            {% if value.os == "Linux" %}
+            {% for pkg in value.packages %}
+            {% endfor %}
+            {% else %}
+
+            {% endif %}
+
+            {% endfor %}
+
+            {%endfor%}
+
             <br>
             {% include "footer" %}
         </body>

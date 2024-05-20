@@ -1,10 +1,10 @@
 use std::collections::HashMap;
 
-use crate::version::{Status, VERSIONS};
+use crate::version::{Status, Version, VERSIONS};
 use anyhow::Result;
 use rocket::form::validate::Contains;
 use serde::{Deserialize, Serialize};
-const LINK: &str = "https://raw.githubusercontent.com/Mustafif/MufiZ/next/targets.json";
+const LINK: &str = "https://raw.githubusercontent.com/Mustafif/MufiZ/main/targets.json";
 
 pub type Packages = Vec<Package>;
 
@@ -54,7 +54,7 @@ pub async fn packages() -> Packages {
         .unwrap();
 
     for t in targets.targets {
-        packages.push(Package::new(t.as_str(), latest_version.version().as_str()));
+        packages.push(Package::new(t.as_str(), latest_version));
     }
 
     packages
@@ -70,23 +70,22 @@ pub struct Package {
 }
 
 impl Package {
-    pub fn new(target: &str, version: &str) -> Self {
+    pub fn new(target: &str, v: &Version) -> Self {
         let mut deb: Option<String> = None;
         let mut rpm: Option<String> = None;
-        let version_orig = version;
-        let mut version = version.to_string();
-        version.remove(0);
+        let tag_v = v.tag_v();
+        let version = v.version();
         if target.contains("linux") {
             let deb_arch = *ARCH_MAP_DEB.clone().get(target).unwrap_or(&"amd64");
             let rpm_arch = *ARCH_MAP_RPM.clone().get(target).unwrap_or(&"x86_64");
-            deb = Some(format!("https://github.com/Mustafif/MufiZ/releases/download/{version_orig}/mufiz_{version}_{deb_arch}.deb"));
-            rpm = Some(format!("https://github.com/Mustafif/MufiZ/releases/download/{version_orig}/mufiz-{version}-1.{rpm_arch}.rpm"));
+            deb = Some(format!("https://github.com/Mustafif/MufiZ/releases/download/{tag_v}/mufiz_{version}_{deb_arch}.deb"));
+            rpm = Some(format!("https://github.com/Mustafif/MufiZ/releases/download/{tag_v}/mufiz-{version}-1.{rpm_arch}.rpm"));
         }
 
         Self{
             target: target.to_string(),
-            version: version_orig.to_string(),
-            zip: format!("https://github.com/Mustafif/MufiZ/releases/download/{version_orig}/mufiz_{version}_{target}.zip"),
+            version: tag_v.to_string(),
+            zip: format!("https://github.com/Mustafif/MufiZ/releases/download/{tag_v}/mufiz_{version}_{target}.zip"),
             deb,
             rpm
         }
