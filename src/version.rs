@@ -4,10 +4,10 @@ use serde::{Deserialize, Serialize};
 lazy_static! {
     pub static ref VERSIONS: Vec<Version> = vec![
         Version::new("v0.1.0", "Baloo", Status::Archived),
-        Version::new("v0.2.0", "Zula", Status::Archived),
-        Version::new("v0.3.0", "Iris", Status::Archived),
-        Version::new("v0.4.0", "Voxl", Status::Archived),
-        Version::new("v0.5.0", "Luna", Status::Archived),
+        Version::new("v0.2.0", "Zula", Status::ReleasedStar),
+        Version::new("v0.3.0", "Iris", Status::ReleasedStar),
+        Version::new("v0.4.0", "Voxl", Status::ReleasedStar),
+        Version::new("v0.5.0", "Luna", Status::ReleasedStar),
         Version::new("v0.6.0", "Mars", Status::Latest),
         Version::new("v0.7.0", "Jade", Status::InProgress),
     ];
@@ -40,7 +40,7 @@ impl Version {
     }
     pub fn link(&self) -> String {
         match self.status {
-            Status::Archived => String::new(),
+            Status::ReleasedStar => String::new(),
             _ => format!(
                 "https://github.com/Mustafif/MufiZ/releases/tag/{}",
                 &self.tag_v
@@ -64,6 +64,8 @@ impl Version {
 pub enum Status {
     Archived,
     Released,
+    #[serde(rename = "Released*")]
+    ReleasedStar, 
     Latest,
     #[serde(rename = "In Progress")]
     InProgress,

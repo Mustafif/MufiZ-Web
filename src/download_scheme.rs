@@ -46,7 +46,7 @@ pub async fn download_scheme() -> DownloadScheme{
     let mut threads = Vec::new();
     let mut ds = DownloadScheme::new();
     for v in VERSIONS.iter(){
-        if v.status == crate::version::Status::Archived{
+        if (v.status == crate::version::Status::Archived) || (v.status == crate::version::Status::ReleasedStar){
             continue;
         }
         let t = tokio::spawn(

@@ -250,6 +250,18 @@ a:hover {
     text-align: left
 }
 
+.package-table td i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.package-table th {
+    text-align: center;
+    font-weight: bold;
+}
+
 .package-table th{
     color: black;
 }

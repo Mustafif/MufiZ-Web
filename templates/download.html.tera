@@ -6,29 +6,270 @@
     {% include "nav" %}
 
     <body>
-        <div class="w3-container container w3-mobile">
-            <div class="w3-container box w3-mobile">
-                <div class="w3-center w3-text-white">
-                    <h1>In Construction</h1>
+
+        <div class="w3-container container w3-mobile w3-text-white">
+            <h1 class="w3-text-black w3-center">Installation Guide</h1>
+            <div class="box w3-mobile">
+                <h2>Package Managers</h2>
+                <div class="w3-text-white">
+                    <button class="w3-button w3-block w3-round"
+                        style="background-color: #f0ad4e; width: 75%; color: black;margin-right: auto; margin-left: auto;"
+                        onclick="toggleAccordionPM('apt')"><h6><strong>APT</strong></h6></button>
+                    <div id="apt" class="w3-hide w3-container">
+                        <pre
+                            class="language-bash"><code>$ curl -s https://packagecloud.io/install/repositories/Mustafif/MufiZ/script.deb.sh | sudo bash
+$ sudo apt install mufiz</code></pre>
+                        <div class="w3-centered">
+                            <table class="package-table"
+                                style="width: 50%; margin-right: auto; margin-left: auto;">
+                                <thead>
+                                    <tr>
+                                        <th><strong>Supported
+                                                Architectures</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><code>amd64</code></td></tr>
+                                    <tr><td><code>i386</code></td></tr>
+                                    <tr><td><code>arm64</code></td></tr>
+                                    <tr><td><code>mipsel</code></td></tr>
+                                    <tr><td><code>mips64el</code></td></tr>
+                                    <tr><td><code>mips</code></td></tr>
+                                    <tr><td><code>powerpc</code></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+                        <div class="w3-container">
+                            <table class="package-table" style="width: 50%; margin-right: auto; margin-left: auto;">
+                                <thead>
+                                    <tr>
+                                        <th>Supported OS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Debian 12 (Bookworm)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Debian 13 (Trixie)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Debian 14 (Forky)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ubuntu 22.04 (Jammy)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ubuntu 24.04 (Noble)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+
+                    <br />
+
+                    <button class="w3-button w3-block w3-round"
+                        style="background-color: #f0ad4e; width: 75%; color: black;margin-right: auto; margin-left: auto;"
+                        onclick="toggleAccordionPM('yum')"><h6><strong>YUM</strong></h6></button>
+                    <div id="yum" class="w3-hide w3-container">
+                        <pre
+                            class="language-bash"><code>$ curl -s https://packagecloud.io/install/repositories/Mustafif/MufiZ/script.rpm.sh | sudo bash
+$ sudo yum install mufiz-{version}-1.{arch} # starts from version 0.6.0</code></pre>
+                        <div class="w3-centered">
+                            <table class="package-table"
+                                style="width: 50%; margin-right: auto; margin-left: auto;">
+                                <p>Where <code>{arch}</code> is the following supported architectures:</p>
+                                <thead>
+                                    <tr>
+                                        <th><strong>Supported
+                                                Architectures</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><code>x86_64</code></td></tr>
+                                    <tr><td><code>i386</code></td></tr>
+                                    <tr><td><code>aarch64</code></td></tr>
+                                    <tr><td><code>ppc64</code></td></tr>
+                                    <tr><td><code>ppc64le</code></td></tr>
+                                    <tr><td><code>mipsel</code></td></tr>
+                                    <tr><td><code>mips64el</code></td></tr>
+                                    <tr><td><code>mips64</code></td></tr>
+                                    <tr><td><code>mips</code></td></tr>
+                                    <tr><td><code>riscv64</code></td></tr>
+                                </tbody>
+                            </table>
+
+                            <br>
+                            <table class="package-table" style="width: 50%; margin-right: auto; margin-left: auto;">
+                                <thead>
+                                    <tr>
+                                        <th>Supported OS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Fedora 38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fedora 39</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fedora 40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>openSUSE 42.3</td>
+                                    </tr>
+                                </tbody>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        <br>
+                    </div>
+                    <br>
+
+                    <button class="w3-button w3-block w3-round"
+                        style="background-color: #f0ad4e; width: 75%; color: black;margin-right: auto; margin-left: auto;"
+                        onclick="toggleAccordionPM('scoop')"><h6><strong>SCOOP</strong></h6></button>
+                    <div id="scoop" class="w3-hide w3-container">
+                        <p>We host our own Scoop Bucket at <a
+                                href="https://github.com/Mustafif/mufi-bucket">https://github.com/Mustafif/mufi-bucket</a></p>
+                        <p>Run the following commands to add the bucket and
+                            install Mufi-Lang:</p>
+                        <pre
+                            class="language-powershell"><code>$ scoop bucket add mufi-bucket https://github.com/mustafif/mufi-bucket
+$ scoop install mufi-bucket/MufiZ</code></pre>
+                    </div>
+
+                    <br />
+
+                    <button class="w3-button w3-block w3-round"
+                        style="background-color: #f0ad4e; width: 75%; color: black;margin-right: auto; margin-left: auto;"
+                        onclick="toggleAccordionPM('brew')"><h6><strong>BREW</strong></h6></button>
+                    <div id="brew" class="w3-hide w3-container">
+                        <p>We host our own Homebrew Tap at <a
+                                href="https://github.com/Mustafif/homebrew-mufi">https://github.com/Mustafif/homebrew-mufi</a></p>
+                        <p>Run the following commands to add the tap and
+                            install Mufi-Lang:</p>
+                        <pre
+                            class="language-shell"><code>$ brew tap mustafif/mufi
+$ brew install MufiZ</code></pre>
+                        We support the following targets:
+                        <strong>x86_64-linux</strong>,
+                        <strong>aarch64-macos</strong>
+                        (M-Series Macs) and <strong>x86_64-macos</strong> (Intel
+                        Macs).
+                    </div>
                 </div>
+                <br>
+                                    <div class="box w3-mobile">
+            <h2>Manual Installation</h2>
+            <h3>Debian Package</h3>
+            <p>Download the latest DEB package and use the following
+                commands: </p>
+            <pre
+                class="language-bash"><code>$ sudo dpkg -i mufiz_{version}_{arch}.deb</code></pre>
+
+            <h3>RPM Package</h3>
+            <p>Download the latest RPM package and use the following
+                commands: </p>
+            <pre
+                class="language-bash"><code>$ sudo rpm -i mufiz-{version}-1.{arch}.rpm</code></pre>
+
+            <h3>Linux/MacOS Zip</h3>
+            <p>Download the latest zip package and use the following
+                commands: </p>
+            <pre
+                class="language-bash"><code>$ unzip mufiz_{version}_{target}.zip
+$ sudo mv mufiz /usr/local/bin</code></pre>
+
+            <h3>Windows</h3>
+            <ol>
+                <li>Download the <code>mufiz_{version}_{target}.zip</code>
+                    file from the releases page.</li>
+                <li>Extract the zip file to a directory of your choice.</li>
+                <li>Add the directory to your PATH environment
+                    variable.</li>
+                <li>Open a new terminal and run <code>mufiz --version</code>
+                    to verify the installation.</li>
+            </ol>
+        </div>
             </div>
+        </div>
 
-            {% for v in versions | reverse %}
-            <h1>{{ v }}</h1>
-            {% for value in down_scheme[v] %}
-            <p>{{ value.os }}</p>
-            {% if value.os == "Linux" %}
-            {% for pkg in value.packages %}
-            {% endfor %}
+
+    <div class="w3-container container w3-mobile w3-text-white">
+        <h1 class="w3-text-black w3-center">Packages for Manual
+            Download</h1>
+        {% for v in versions | reverse %}
+        <div class="w3-container box w3-mobile">
+            {% if v == versions | reverse | first %}
+            <h1>{{ v }} - <span style="color: red;">Experimental</span></h1>
             {% else %}
-
+            <h1>{{ v }}</h1>
             {% endif %}
 
+            {% for value in down_scheme[v] %}
+            <h3>{{ value.os }}</h3>
+            {% if value.os == "Linux" %}
+            <table class="package-table" style="width: 100%;">
+                <tr>
+                    <th>Target</th>
+                    <th>Zip</th>
+                    <th>Deb</th>
+                    <th>Rpm</th>
+                </tr>
+                {% for pkg in value.packages %}
+                <tr>
+                    <td>{{ pkg.target }}</td>
+                    <td><a href="{{ pkg.zip }}"><i
+                                class="fa fa-download w3-text-white"></i>
+                        </a></td>
+                    <td><a href="{{ pkg.deb }}"><i
+                                class="fa fa-download w3-text-white"></i>
+                        </a></td>
+                    <td><a href="{{ pkg.rpm }}"><i
+                                class="fa fa-download w3-text-white"></i></a></td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <table class="package-table" style="width: 100%;">
+                <tr>
+                    <th>Target</th>
+                    <th>Zip</th>
+                </tr>
+                {% for pkg in value.packages %}
+                <tr>
+                    <td>{{ pkg.target }}</td>
+                    <td><a href="{{ pkg.zip }}"><i
+                                class="fa fa-download w3-text-white"></i>
+                        </a></td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
             {% endfor %}
+        </div>
+        <br>
+        <br>
+        {% endfor %}
+    </div>
 
-            {%endfor%}
-
-            <br>
-            {% include "footer" %}
-        </body>
-    </html>
+    {% include "footer" %}
+    <script>
+        function toggleAccordionPM(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+              x.className += " w3-show";
+            } else {
+              x.className = x.className.replace(" w3-show", "");
+            }
+          }
+    </script>
+</body>
+</html>
