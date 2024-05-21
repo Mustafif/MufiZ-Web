@@ -46,3 +46,23 @@
         <i class="fa fa-newspaper"></i> News
     </a>
 </nav>
+
+{# <script>
+    function applyTheme(theme) {
+        if (theme === 'dark') {
+          document.body.classList.add('dark-mode');
+        } else {
+          document.body.classList.remove('dark-mode');
+        }
+      }
+      
+      // Apply theme based on system preference
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+      
+      applyTheme(prefersDarkScheme.matches ? 'dark' : 'light');
+      
+      // Listen for changes in the system theme preference
+      prefersDarkScheme.addEventListener('change', (e) => {
+        applyTheme(e.matches ? 'dark' : 'light');
+      });      
+</script>       #}

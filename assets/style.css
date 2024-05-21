@@ -1,3 +1,29 @@
+.container,
+footer,
+nav {
+    max-width: 80%
+}
+
+.accordion-content.show,
+footer a,
+nav a {
+    display: block
+}
+
+a,
+footer a,
+footer a:hover,
+nav a,
+nav a:hover {
+    text-decoration: none
+}
+
+footer a,
+nav a {
+    float: left;
+    padding: 14px 20px
+}
+
 body,
 h1,
 h2,
@@ -21,22 +47,6 @@ ul {
 option,
 select {
     background-color: #fff
-}
-
-.container,
-nav {
-    max-width: 80%
-}
-
-.accordion-content.show,
-nav a {
-    display: block
-}
-
-a,
-nav a,
-nav a:hover {
-    text-decoration: none
 }
 
 body {
@@ -250,30 +260,33 @@ a:hover {
     text-align: left
 }
 
-.package-table td i{
+.package-table td i {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: center
 }
 
 .package-table th {
     text-align: center;
-    font-weight: bold;
+    font-weight: 700;
+    color: #000
 }
 
-.package-table th{
-    color: black;
-}
-
-.package-table tr{
+.package-table tr {
     background-color: #343a40;
-    color: #f2f2f2;
+    color: #f2f2f2
 }
 
 .accordion-button,
 .package-table tr:hover {
-    background-color: rgb(63, 155, 186);
+    background-color: #3f9bba
+}
+
+.accordion-content,
+footer,
+footer a {
+    background-color: #343a40
 }
 
 .w3-card {
@@ -299,6 +312,7 @@ a:hover {
 .subtitle,
 .title,
 footer,
+footer a,
 nav a {
     text-align: center
 }
@@ -312,8 +326,7 @@ nav a {
 .accordion-content {
     display: none;
     padding: 20px;
-    background-color: #343a40;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 .accordion-button.active::after {
@@ -334,27 +347,17 @@ nav a {
 footer {
     left: 0;
     bottom: 0;
-    max-width: 80%;
-    margin: auto;
-    background-color: #343a40;
-    
+    margin: auto
 }
 
 footer a {
     color: #f2f2f2;
-    width: calc(100% / 3);
-    text-align: center;
-    float: left;
-    text-decoration: none;
-    display: block;
-    padding: 14px 20px;
-    background-color: #343a40;
+    width: calc(100% / 3)
 }
 
-footer a:hover{
+footer a:hover {
     background-color: #f0ad4e;
-    color: #333;
-    text-decoration: none;
+    color: #333
 }
 
 nav {
@@ -363,9 +366,7 @@ nav {
 }
 
 nav a {
-    float: left;
     color: #f2f2f2;
-    padding: 14px 20px;
     width: calc(100% / 5)
 }
 
